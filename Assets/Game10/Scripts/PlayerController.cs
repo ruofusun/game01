@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
                 if (rb2d)
                 {
 
-                    rb2d.velocity = new Vector2(rb2d.velocity.x * 0.4f, jumpUpSpeed);
+                    rb2d.velocity = new Vector2(rb2d.velocity.x * 0.2f, jumpUpSpeed);
                     // inAir = true;
                 }
             }
