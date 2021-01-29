@@ -1,0 +1,998 @@
+fileFormatVersion: 2
+guid: c6e202ab4b12c41cba9901236e4b84b1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5759171711438524183
+    second: Enemy_PowerStrip_0
+  - first:
+      213: 3928299667987730395
+    second: Enemy_PowerStrip_1
+  - first:
+      213: 8991735067788430118
+    second: Enemy_PowerStrip_2
+  - first:
+      213: 2904089468834286717
+    second: Enemy_PowerStrip_3
+  - first:
+      213: -3836686951146633966
+    second: Enemy_PowerStrip_4
+  - first:
+      213: 4351465371242976236
+    second: Enemy_PowerStrip_5
+  - first:
+      213: -2742992684411399207
+    second: Enemy_PowerStrip_6
+  - first:
+      213: 544092884885065919
+    second: Enemy_PowerStrip_7
+  - first:
+      213: 6805676082033211247
+    second: Enemy_PowerStrip_8
+  - first:
+      213: -6172912914765057467
+    second: Enemy_PowerStrip_9
+  - first:
+      213: -5787661969933838261
+    second: Enemy_PowerStrip_10
+  - first:
+      213: -2022819915598821373
+    second: Enemy_PowerStrip_11
+  - first:
+      213: -8988396736874665031
+    second: Enemy_PowerStrip_12
+  - first:
+      213: -727678144652918122
+    second: Enemy_PowerStrip_13
+  - first:
+      213: -2162824295443557603
+    second: Enemy_PowerStrip_14
+  - first:
+      213: -1329893551175365288
+    second: Enemy_PowerStrip_15
+  - first:
+      213: -3286347368334407718
+    second: Enemy_PowerStrip_16
+  - first:
+      213: 5398672438192912522
+    second: Enemy_PowerStrip_17
+  - first:
+      213: 7643715690162023211
+    second: Enemy_PowerStrip_18
+  - first:
+      213: 1573810956274425998
+    second: Enemy_PowerStrip_19
+  - first:
+      213: -2622360630873039363
+    second: Enemy_PowerStrip_20
+  - first:
+      213: -8854831170114966005
+    second: Enemy_PowerStrip_21
+  - first:
+      213: 4114299033487267338
+    second: Enemy_PowerStrip_22
+  - first:
+      213: -5271335876105685182
+    second: Enemy_PowerStrip_23
+  - first:
+      213: 4138135365381670439
+    second: Enemy_PowerStrip_24
+  - first:
+      213: 7178884601526412626
+    second: Enemy_PowerStrip_25
+  - first:
+      213: -4668996686785226298
+    second: Enemy_PowerStrip_26
+  - first:
+      213: -1698309884340062188
+    second: Enemy_PowerStrip_27
+  - first:
+      213: -9154639846241144948
+    second: Enemy_PowerStrip_28
+  - first:
+      213: 227357450782712095
+    second: Enemy_PowerStrip_29
+  - first:
+      213: 5862488393011525915
+    second: Enemy_PowerStrip_30
+  - first:
+      213: 3626001762319924760
+    second: Enemy_PowerStrip_31
+  - first:
+      213: 3342977811080620907
+    second: Enemy_PowerStrip_32
+  - first:
+      213: -3244972330184492456
+    second: Enemy_PowerStrip_33
+  - first:
+      213: 6022094903889007642
+    second: Enemy_PowerStrip_34
+  - first:
+      213: -3928073244091819056
+    second: Enemy_PowerStrip_35
+  - first:
+      213: -690048557384653103
+    second: Enemy_PowerStrip_36
+  - first:
+      213: 3302668004199415650
+    second: Enemy_PowerStrip_37
+  - first:
+      213: -3555092146201887917
+    second: Enemy_PowerStrip_38
+  - first:
+      213: -6444248445276085817
+    second: Enemy_PowerStrip_39
+  - first:
+      213: 1480192823497022064
+    second: Enemy_PowerStrip_40
+  - first:
+      213: -2232690791922257524
+    second: Enemy_PowerStrip_41
+  - first:
+      213: -6096211724537532866
+    second: Enemy_PowerStrip_42
+  - first:
+      213: -4610719493005606099
+    second: Enemy_PowerStrip_43
+  - first:
+      213: -4164567018605938894
+    second: Enemy_PowerStrip_44
+  - first:
+      213: -568173160972639209
+    second: Enemy_PowerStrip_45
+  - first:
+      213: 7375971365372013809
+    second: Enemy_PowerStrip_46
+  - first:
+      213: 2531027324478435472
+    second: Enemy_PowerStrip_47
+  - first:
+      213: 1130879010669000084
+    second: Enemy_PowerStrip_48
+  - first:
+      213: -5198874348319074459
+    second: Enemy_PowerStrip_49
+  - first:
+      213: -918774281377046436
+    second: Enemy_PowerStrip_50
+  - first:
+      213: -5031247014972716557
+    second: Enemy_PowerStrip_51
+  - first:
+      213: -787790990947400558
+    second: Enemy_PowerStrip_52
+  - first:
+      213: -382422695825793631
+    second: Enemy_PowerStrip_53
+  - first:
+      213: -112565895342539539
+    second: Enemy_PowerStrip_54
+  - first:
+      213: 5354087283410690361
+    second: Enemy_PowerStrip_55
+  - first:
+      213: -7721468859571423459
+    second: Enemy_PowerStrip_56
+  - first:
+      213: -5850069307984237813
+    second: Enemy_PowerStrip_57
+  - first:
+      213: -3839705812651985895
+    second: Enemy_PowerStrip_58
+  - first:
+      213: -5397632068156146063
+    second: Enemy_PowerStrip_59
+  - first:
+      213: -6020678940657253275
+    second: Enemy_PowerStrip_60
+  - first:
+      213: 511945425673623591
+    second: Enemy_PowerStrip_61
+  - first:
+      213: -6050838436941306933
+    second: Enemy_PowerStrip_62
+  - first:
+      213: 5774529764035490988
+    second: Enemy_PowerStrip_63
+  - first:
+      213: 8928576472861804195
+    second: Enemy_PowerStrip_64
+  - first:
+      213: 8005945147507165800
+    second: Enemy_PowerStrip_65
+  - first:
+      213: -3035137563797630524
+    second: Enemy_PowerStrip_66
+  - first:
+      213: -2405101420434653154
+    second: Enemy_PowerStrip_67
+  - first:
+      213: 5780480046814288560
+    second: Enemy_PowerStrip_68
+  - first:
+      213: 2696327770246384404
+    second: Enemy_PowerStrip_69
+  - first:
+      213: -6750819160602981385
+    second: Enemy_PowerStrip_70
+  - first:
+      213: -841868596056049082
+    second: Enemy_PowerStrip_71
+  - first:
+      213: 8504386023281082909
+    second: Enemy_PowerStrip_72
+  - first:
+      213: 250547014750195542
+    second: Enemy_PowerStrip_73
+  - first:
+      213: 6355330319394854706
+    second: Enemy_PowerStrip_74
+  - first:
+      213: 6782204495857604252
+    second: Enemy_PowerStrip_75
+  - first:
+      213: 362425540211402114
+    second: Enemy_PowerStrip_76
+  - first:
+      213: -8613838214048559752
+    second: Enemy_PowerStrip_77
+  - first:
+      213: 4254172491828326823
+    second: Enemy_PowerStrip_78
+  - first:
+      213: -410478708436022181
+    second: Enemy_PowerStrip_79
+  - first:
+      213: -1728448173422118971
+    second: Enemy_PowerStrip_80
+  - first:
+      213: -6003216835598327510
+    second: Enemy_PowerStrip_81
+  - first:
+      213: -138390001689773629
+    second: Enemy_PowerStrip_82
+  - first:
+      213: 300522421329774575
+    second: Enemy_PowerStrip_83
+  - first:
+      213: 6078363729316228365
+    second: Enemy_PowerStrip_84
+  - first:
+      213: -6624196860797984574
+    second: Enemy_PowerStrip_85
+  - first:
+      213: 5692193983574820844
+    second: Enemy_PowerStrip_86
+  - first:
+      213: -8485702692059581128
+    second: Enemy_PowerStrip_87
+  - first:
+      213: 3490619787298556126
+    second: Enemy_PowerStrip_88
+  - first:
+      213: 7916922396870730040
+    second: Enemy_PowerStrip_89
+  - first:
+      213: -5703205237139200611
+    second: Enemy_PowerStrip_90
+  - first:
+      213: -4131139923129602103
+    second: Enemy_PowerStrip_91
+  - first:
+      213: -3841776209553032171
+    second: Enemy_PowerStrip_92
+  - first:
+      213: 197215149286035416
+    second: Enemy_PowerStrip_93
+  - first:
+      213: -6286626393017876987
+    second: Enemy_PowerStrip_94
+  - first:
+      213: -3359216144133234542
+    second: Enemy_PowerStrip_95
+  - first:
+      213: 8561313309014328659
+    second: Enemy_PowerStrip_96
+  - first:
+      213: -3425356974651821601
+    second: Enemy_PowerStrip_97
+  - first:
+      213: -5483884228844271457
+    second: Enemy_PowerStrip_98
+  - first:
+      213: -4371006071265398744
+    second: Enemy_PowerStrip_99
+  - first:
+      213: 7470988377100123307
+    second: Enemy_PowerStrip_100
+  - first:
+      213: 5683219798943705626
+    second: Enemy_PowerStrip_101
+  - first:
+      213: -2725060615425302376
+    second: Enemy_PowerStrip_102
+  - first:
+      213: -7636108825947879087
+    second: Enemy_PowerStrip_103
+  - first:
+      213: -3429186597624185188
+    second: Enemy_PowerStrip_104
+  - first:
+      213: -8142460524032877102
+    second: Enemy_PowerStrip_105
+  - first:
+      213: -5353707481164115350
+    second: Enemy_PowerStrip_106
+  - first:
+      213: 5428988151032358540
+    second: Enemy_PowerStrip_107
+  - first:
+      213: 8299962610226538193
+    second: Enemy_PowerStrip_108
+  - first:
+      213: 3526168973496721879
+    second: Enemy_PowerStrip_109
+  - first:
+      213: -2925438487576476355
+    second: Enemy_PowerStrip_110
+  - first:
+      213: -6194170870686299658
+    second: Enemy_PowerStrip_111
+  - first:
+      213: -3087990411863376026
+    second: Enemy_PowerStrip_112
+  - first:
+      213: 7628237695455416537
+    second: Enemy_PowerStrip_113
+  - first:
+      213: 6144461222847082041
+    second: Enemy_PowerStrip_114
+  - first:
+      213: 3962966400877468626
+    second: Enemy_PowerStrip_115
+  - first:
+      213: -8640687910730170543
+    second: Enemy_PowerStrip_116
+  - first:
+      213: 6468362949143510518
+    second: Enemy_PowerStrip_117
+  - first:
+      213: -1474514476917468451
+    second: Enemy_PowerStrip_118
+  - first:
+      213: -4581935440626098894
+    second: Enemy_PowerStrip_119
+  - first:
+      213: 7838547147809242562
+    second: Enemy_PowerStrip_120
+  - first:
+      213: -7769978308453670492
+    second: Enemy_PowerStrip_121
+  - first:
+      213: 761780207771745393
+    second: Enemy_PowerStrip_122
+  - first:
+      213: -802373210179688229
+    second: Enemy_PowerStrip_123
+  - first:
+      213: 4729996140746074592
+    second: Enemy_PowerStrip_124
+  - first:
+      213: -8929738379325060251
+    second: Enemy_PowerStrip_125
+  - first:
+      213: -6418939477913624688
+    second: Enemy_PowerStrip_126
+  - first:
+      213: 2700923699371831526
+    second: Enemy_PowerStrip_127
+  - first:
+      213: -506460715222873183
+    second: Enemy_PowerStrip_128
+  - first:
+      213: 5667076794822056894
+    second: Enemy_PowerStrip_129
+  - first:
+      213: 6396622595187099339
+    second: Enemy_PowerStrip_130
+  - first:
+      213: -5939183190048871451
+    second: Enemy_PowerStrip_131
+  - first:
+      213: 3389211926154096363
+    second: Enemy_PowerStrip_132
+  - first:
+      213: -1304163675222468312
+    second: Enemy_PowerStrip_133
+  - first:
+      213: 3206277460291129052
+    second: Enemy_PowerStrip_134
+  - first:
+      213: 639673396366749373
+    second: Enemy_PowerStrip_135
+  - first:
+      213: 1503887415085630105
+    second: Enemy_PowerStrip_136
+  - first:
+      213: 1326985537034857209
+    second: Enemy_PowerStrip_137
+  - first:
+      213: 5720959381217500389
+    second: Enemy_PowerStrip_138
+  - first:
+      213: 5438043654690683943
+    second: Enemy_PowerStrip_139
+  - first:
+      213: 2367806878175362385
+    second: Enemy_PowerStrip_140
+  - first:
+      213: 2972665560771935409
+    second: Enemy_PowerStrip_141
+  - first:
+      213: 5725134456829474345
+    second: Enemy_PowerStrip_142
+  - first:
+      213: 8283096475184143582
+    second: Enemy_PowerStrip_143
+  - first:
+      213: -7943631606299035342
+    second: Enemy_PowerStrip_144
+  - first:
+      213: -6937537231338778413
+    second: Enemy_PowerStrip_145
+  - first:
+      213: -3151113852907611731
+    second: Enemy_PowerStrip_146
+  - first:
+      213: -6862753732765690027
+    second: Enemy_PowerStrip_147
+  - first:
+      213: 7154638527718569363
+    second: Enemy_PowerStrip_148
+  - first:
+      213: -8344288278246218018
+    second: Enemy_PowerStrip_149
+  - first:
+      213: 2643538920674018813
+    second: Enemy_PowerStrip_150
+  - first:
+      213: -8237723333731100202
+    second: Enemy_PowerStrip_151
+  - first:
+      213: 4759340803540266156
+    second: Enemy_PowerStrip_152
+  - first:
+      213: -9020082569949027049
+    second: Enemy_PowerStrip_153
+  - first:
+      213: 138609530750653060
+    second: Enemy_PowerStrip_0
+  - first:
+      213: 6684627100078552849
+    second: Enemy_PowerStrip_1
+  - first:
+      213: -5215548656875398277
+    second: Enemy_PowerStrip_2
+  - first:
+      213: -5249846661049879310
+    second: Enemy_PowerStrip_3
+  - first:
+      213: 5254282799166837708
+    second: Enemy_PowerStrip_4
+  - first:
+      213: 6587589503357346506
+    second: Enemy_PowerStrip_5
+  - first:
+      213: -9022475619967354917
+    second: Enemy_PowerStrip_6
+  - first:
+      213: 5117185937912842503
+    second: Enemy_PowerStrip_7
+  - first:
+      213: 3494347743374776204
+    second: Enemy_PowerStrip_8
+  - first:
+      213: 4120296159990840076
+    second: Enemy_PowerStrip_9
+  - first:
+      213: -1346510012707054436
+    second: Enemy_PowerStrip_10
+  - first:
+      213: 3503362224407329419
+    second: Enemy_PowerStrip_11
+  - first:
+      213: 555635139999976098
+    second: Enemy_PowerStrip_12
+  - first:
+      213: 1855856027905142665
+    second: Enemy_PowerStrip_13
+  - first:
+      213: -2151092896529674280
+    second: Enemy_PowerStrip_14
+  - first:
+      213: -8572700745403875910
+    second: Enemy_PowerStrip_15
+  - first:
+      213: -8860428583238497939
+    second: Enemy_PowerStrip_16
+  - first:
+      213: 5365201656324248709
+    second: Enemy_PowerStrip_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48250e242a07ce100800000000000000
+      internalID: 138609530750653060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117b12c4ee094cc50800000000000000
+      internalID: 6684627100078552849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b1d263126ae97b0800000000000000
+      internalID: -5215548656875398277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4f9d2d64cc427b0800000000000000
+      internalID: -5249846661049879310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3d8c11e56fae840800000000000000
+      internalID: 5254282799166837708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2e4b130c1db6b50800000000000000
+      internalID: 6587589503357346506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7393d0a3ab9c280800000000000000
+      internalID: -9022475619967354917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7094bee9f75e30740800000000000000
+      internalID: 5117185937912842503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c879a8d32ca6e7030800000000000000
+      internalID: 3494347743374776204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0bf8a9f68b3e2930800000000000000
+      internalID: 4120296159990840076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9cd61e074c305de0800000000000000
+      internalID: -1346510012707054436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_11
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a3259a1617e9030800000000000000
+      internalID: 3503362224407329419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa4c68473306b700800000000000000
+      internalID: 555635139999976098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fad81893351c910800000000000000
+      internalID: 1855856027905142665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df8b775868c522e0800000000000000
+      internalID: -2151092896529674280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abdb9789716a70980800000000000000
+      internalID: -8572700745403875910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d690a5ae52f690580800000000000000
+      internalID: -8860428583238497939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_17
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5845b89fa76057a40800000000000000
+      internalID: 5365201656324248709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
