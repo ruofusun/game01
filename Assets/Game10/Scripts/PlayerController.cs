@@ -9,12 +9,10 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpUpSpeed;
     public float gravityModifier = 1.5f;
-    public Transform shootingPoint;
-    public GameObject growSpell;
+  //  public Transform shootingPoint;
+   // public GameObject growSpell;
     public Transform leftFoot;
     public Transform rightFoot;
-    public Transform leftBoundry;
-    public Transform rightBoundry;
     public float damageCD = 2f;
 
     //  bool inAir = false;
@@ -49,9 +47,9 @@ public class PlayerController : MonoBehaviour
         //ground check and platform check, need refactoring 
         RaycastHit2D g_left = Physics2D.Raycast(leftFoot.position, Vector2.down, 0.1f, LayerMask.GetMask("Ground"));
         RaycastHit2D g_right = Physics2D.Raycast(rightFoot.position, Vector2.down, 0.1f, LayerMask.GetMask("Ground"));
-        RaycastHit2D p_left = Physics2D.Raycast(leftFoot.position, Vector2.down, 0.1f, LayerMask.GetMask("Platform"));
-        RaycastHit2D p_right = Physics2D.Raycast(rightFoot.position, Vector2.down, 0.1f, LayerMask.GetMask("Platform"));
-        if (g_left.collider || g_right.collider || p_left.collider || p_right.collider)
+      //  RaycastHit2D p_left = Physics2D.Raycast(leftFoot.position, Vector2.down, 0.1f, LayerMask.GetMask("Platform"));
+      //  RaycastHit2D p_right = Physics2D.Raycast(rightFoot.position, Vector2.down, 0.1f, LayerMask.GetMask("Platform"));
+        if (g_left.collider || g_right.collider)
         {
             grounded = true;
         }
@@ -81,7 +79,7 @@ public class PlayerController : MonoBehaviour
                 if (rb2d)
                 {
 
-                    rb2d.velocity = new Vector2(rb2d.velocity.x * 0.7f, jumpUpSpeed);
+                    rb2d.velocity = new Vector2(rb2d.velocity.x * 0.4f, jumpUpSpeed);
                     // inAir = true;
                 }
             }
@@ -186,3 +184,4 @@ public class PlayerController : MonoBehaviour
     }
 
 }
+    
