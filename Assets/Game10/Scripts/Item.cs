@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour{
     public string craftText = ".";
+    public Item originalPrefab;
 
     public void AlignToSlot(Transform slotTransform) {
         Transform trans = transform;
@@ -12,4 +13,10 @@ public class Item : MonoBehaviour{
         trans.localScale = Vector3.one;
         trans.localRotation = Quaternion.identity;
     }
+
+    void OnValidate() {
+        if (originalPrefab == null)
+            Debug.LogError($"[Item] {name}'s Original Prefab need to be set to the original prefab", this);
+    }
+
 }
