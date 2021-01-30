@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f72e7b7e4f71bd4c9490096c04d40ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockContent: {fileID: 0}
+  blockContent: {fileID: 3967100221292521950, guid: 0e44e26d32f525548ad7f1ec8595c748,
+    type: 3}
 --- !u!95 &202903021721517525
 Animator:
   serializedVersion: 3
@@ -157,7 +158,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1

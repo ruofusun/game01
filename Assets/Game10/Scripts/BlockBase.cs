@@ -14,6 +14,12 @@ public class BlockBase : MonoBehaviour
     }
     protected BlockType _blockType = BlockType.zero;
     public GameObject blockContent;
+
+    protected virtual Item GetItem()
+    {
+        return null;
+    }
+
     protected virtual void OnCollisionEnter(Collision other)
     {
         throw new NotImplementedException();
