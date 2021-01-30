@@ -28,11 +28,6 @@ public class BombController : PropBase
         StartCoroutine(nameof(ExplosionCountDown));
     }
 
-    protected override void OnTriggerEnter(Collider other)
-    {
-  
-    }
-
     IEnumerator ExplosionCountDown()
     {
         yield return new WaitForSecondsRealtime(explodeTimer);
