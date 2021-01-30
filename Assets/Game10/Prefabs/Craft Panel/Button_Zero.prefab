@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5343726477055578831}
   - component: {fileID: 5343726477055578819}
   - component: {fileID: 5343726477055578818}
-  - component: {fileID: 5343726477055578817}
   - component: {fileID: 5343726477055578816}
   m_Layer: 5
   m_Name: Toolbar_Zero_Ani
@@ -77,21 +76,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!111 &5343726477055578817
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5343726477055578830}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 521c3d4d9a984418dbd23a6aee4c8a21, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &5343726477055578816
 Animator:
   serializedVersion: 3
@@ -123,7 +107,6 @@ GameObject:
   - component: {fileID: 5343726478494698205}
   - component: {fileID: 5343726478494698204}
   - component: {fileID: 5343726478494698203}
-  - component: {fileID: 5343726478494698202}
   - component: {fileID: 5343726478494698201}
   m_Layer: 5
   m_Name: Button_Zero
@@ -233,21 +216,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!111 &5343726478494698202
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5343726478494698183}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 0bd678e42e68740d2a9470e8c890e9e1, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &5343726478494698201
 Animator:
   serializedVersion: 3
