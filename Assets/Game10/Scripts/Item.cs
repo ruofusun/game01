@@ -3,5 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Item : MonoBehaviour{
-    public string craftText;
+    public string craftText = ".";
+
+    public void AlignToSlot(Transform slotTransform) {
+        Transform trans = transform;
+        trans.SetParent(slotTransform);
+        trans.localPosition = Vector3.zero;
+        trans.localScale = Vector3.one;
+        trans.localRotation = Quaternion.identity;
+    }
 }
