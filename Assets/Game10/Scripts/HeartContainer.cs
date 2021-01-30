@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class HeartContainer : MonoBehaviour
 {
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -19,11 +20,12 @@ public class HeartContainer : MonoBehaviour
     public void PaintFull()
     {
         
-        
+        anim.SetTrigger("IsFull");
     }
     public void PaintEmpty()
     {
-        
+          
+        anim.SetTrigger("IsEmpty");
         
     }
 }
