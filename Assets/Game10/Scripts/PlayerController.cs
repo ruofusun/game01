@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpUpSpeed;
     public float gravityModifier = 1.5f;
+    public float accelerationInAir = 15f;
 
     public Transform leftFoot;
     public Transform rightFoot;
@@ -40,8 +41,6 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
-    float moveVel;//temp use
     void Update()
     {
         // Debug.DrawRay(leftFoot.position, Vector2.down, Color.white);
@@ -89,19 +88,16 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        //modify jump gravity when falling 
-        if (!grounded && rb2d.velocity.y < 0)
+        //modify jump gravity when falling or jump key released
+        if (!grounded && (rb2d.velocity.y < 0 || !Input.GetKey(KeyCode.Space)))
         {
             rb2d.AddForce(new Vector2(0, -9.81f * gravityModifier));
 
         }
 
 
-        moveVel = 0;
+        float moveVel = 0;
         //left right move
-        if (grounded)
-        {
-            
           /*  if (Input.GetMouseButtonDown(0))
             {
                anim.SetTrigger("IsThrow");
@@ -109,25 +105,22 @@ public class PlayerController : MonoBehaviour
                b.GetComponent<BombController>().SetThrowDirection(faceRight);
             }
 */
-
-
-
-            // inAir = false;
-            if (Input.GetKey(KeyCode.A) && canTakeDamage)
-            {
-                moveVel = -speed;
-                faceRight = false;
-            }
-            if (Input.GetKey(KeyCode.D) && canTakeDamage)
-            {
-                moveVel = speed;
-                faceRight = true;
-            }
-            if (rb2d)
-            {
-                rb2d.velocity = new Vector2(moveVel, rb2d.velocity.y);
-            }
+        // inAir = false;
+        if (Input.GetKey(KeyCode.A) && canTakeDamage)
+        {
+            moveVel = Mathf.MoveTowards(rb2d.velocity.x, -speed, (grounded ? 99999 : accelerationInAir) * Time.deltaTime);
+            faceRight = false;
         }
+        if (Input.GetKey(KeyCode.D) && canTakeDamage)
+        {
+            moveVel = Mathf.MoveTowards(rb2d.velocity.x, speed, (grounded ? 99999 : accelerationInAir) * Time.deltaTime);
+            faceRight = true;
+        }
+        if (rb2d)
+        {
+            rb2d.velocity = new Vector2(moveVel, rb2d.velocity.y);
+        }
+        
         if (sr)
         {
             UpdateFaceDirection(faceRight);

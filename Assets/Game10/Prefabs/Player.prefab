@@ -211,7 +211,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1.5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 751aaee8cec512449822e8f3d14c91eb, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -231,6 +231,7 @@ MonoBehaviour:
   speed: 10
   jumpUpSpeed: 8
   gravityModifier: 1.5
+  accelerationInAir: 50
   leftFoot: {fileID: 6262926523903419208}
   rightFoot: {fileID: 6262926523816602860}
   throwPoint: {fileID: 0}
