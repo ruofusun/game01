@@ -24,7 +24,8 @@ public class JavelinController : PropBase
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
+        if(other.gameObject.layer!= LayerMask.NameToLayer("Enemy"))
+        Destroy(transform.parent.gameObject);
     }
     
 
