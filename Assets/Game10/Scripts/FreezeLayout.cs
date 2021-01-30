@@ -15,7 +15,10 @@ public class FreezeLayout : MonoBehaviour {
         }
     }
 
+    private bool lastFrozen;
     private void OnValidate() {
+        if (lastFrozen == isFrozen) return;
+        lastFrozen = isFrozen;
         foreach (var layout in GetComponentsInChildren<LayoutGroup>()) {
             layout.enabled = isFrozen;
         }
@@ -25,6 +28,10 @@ public class FreezeLayout : MonoBehaviour {
         foreach (var layout in GetComponentsInChildren<AspectRatioFitter>()) {
             layout.enabled = isFrozen;
         }
+    }
+
+    void Awake() {
+        lastFrozen = isFrozen;
     }
     
 }
