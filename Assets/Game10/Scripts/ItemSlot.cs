@@ -2,22 +2,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ItemSlot : MonoBehaviour {
-    private Item item;
-    public Item Item {
-        get => item;
-        set {
-            item = value;
-            item.transform.SetParent(transform);
-            item.FillParent();
+public class ItemSlot : ItemSlotBase {
+    private CraftPanel panel;
+
+    public bool giveOnClick = false;
+    public bool takeOnClick = false;
+    public bool giveCopy = false;
+    public bool takeCopy = false;
+
+    void Awake() {
+        panel = GetComponentInParent<CraftPanel>();
+    }
+
+    public void OnClick() {
+        if ((Item == null || takeCopy) && panel.IsDraggingItem && takeOnClick) {  // take
+            panel.PutDraggedItem(this, takeCopy);
+        }
+        else if (Item != null && (!panel.IsDraggingItem || giveCopy) && giveOnClick) {
+            panel.DragItemFrom(this, giveCopy);
+        }
+        else if (Item != null && panel.IsDraggingItem && giveOnClick && takeOnClick) {
+            panel.ExchangeDraggedItem(this);
         }
     }
 
-    public bool useCurrentChild = true;
-
-    void OnEnable() {
-        if (useCurrentChild)
-            Item = GetComponentInChildren<Item>();
-    }
 }

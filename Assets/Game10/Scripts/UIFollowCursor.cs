@@ -7,11 +7,13 @@ using UnityEngine;
 [DefaultExecutionOrder(-100)]
 public class UIFollowCursor : MonoBehaviour {
     private RectTransform rectTransform;
+    private RectTransform parent;
     private Canvas canvas;
 
     private void Awake() {
         rectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
+        parent = (RectTransform)rectTransform.parent;
     }
 
     void Update() {
@@ -24,13 +26,13 @@ public class UIFollowCursor : MonoBehaviour {
         if (canvas.renderMode != RenderMode.ScreenSpaceOverlay && canvas.worldCamera != null)
         {
             //Canvas is in Camera mode
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, Input.mousePosition, canvas.worldCamera, out var anchorPos);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(parent, Input.mousePosition, canvas.worldCamera, out var anchorPos);
             return anchorPos;
         }
         else
         {
             //Canvas is in Overlay mode
-            Vector2 anchorPos = Input.mousePosition - rectTransform.parent.position;
+            Vector2 anchorPos = (Vector2)Input.mousePosition - parent.anchoredPosition;
             Vector2 lossyScale = rectTransform.lossyScale;
             return anchorPos / lossyScale;
         }
