@@ -8,9 +8,8 @@ public class ItemSlotBase : MonoBehaviour {
     public Item Item {
         get => item;
         set {
+            OnChangeItem(item, value);
             item = value;
-            if (item != null)
-                item.transform.SetParent(transform);
         }
     }
 
@@ -20,4 +19,9 @@ public class ItemSlotBase : MonoBehaviour {
         if (useCurrentChild)
             Item = GetComponentInChildren<Item>();
     }
+
+    protected virtual void OnChangeItem(Item oldItem, Item newItem) {
+        if (newItem != null) newItem.AlignToSlot(this);
+    }
+    
 }

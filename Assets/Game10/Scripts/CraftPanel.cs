@@ -30,30 +30,29 @@ public class CraftPanel : MonoBehaviour {
     public bool IsDraggingItem => dragContainer.Item != null;
     
     public void DragItemFrom([NotNull] ItemSlotBase itemSlotBase, bool copy) {
-        if (IsDraggingItem) EndDragging();
-        dragContainer.Drag(copy ? MakeItem(itemSlotBase.Item) : itemSlotBase.Item);
-        if (!copy) ClearSlot(itemSlotBase);
+        dragContainer.Item = ItemFrom(itemSlotBase, copy);
     }
 
     public void PutDraggedItem([NotNull] ItemSlotBase itemSlotBase, bool copy) {
-        itemSlotBase.Item = copy ? MakeItem(dragContainer.Item) : dragContainer.Item;
-        if (!copy) EndDragging();
+        itemSlotBase.Item = ItemFrom(dragContainer, copy);
     }
     
     public void ExchangeDraggedItem([NotNull] ItemSlotBase itemSlotBase) {
         var tmpItem = itemSlotBase.Item;
         itemSlotBase.Item = dragContainer.Item;
         dragContainer.Item = tmpItem;
-        if (dragContainer.Item == null) dragContainer.FinishDrag();
     }
     
-    public void ClearSlot([NotNull] ItemSlotBase itemSlotBase) {
-        RecycleItem(itemSlotBase.Item);
+    public void EndDragging() {
+        if (!IsDraggingItem) return;
+        RecycleItem(dragContainer.Item);
+        dragContainer.Item = null;
     }
 
-    public void EndDragging() {
-        RecycleItem(dragContainer.Item);
-        dragContainer.FinishDrag();
+    private Item ItemFrom(ItemSlotBase itemSlot, bool copy) {
+        var result = copy ? MakeItem(itemSlot.Item) : itemSlot.Item;
+        if (!copy) itemSlot.Item = null;
+        return result;
     }
 
     #endregion
@@ -71,7 +70,9 @@ public class CraftPanel : MonoBehaviour {
     
     private void RecycleItem(Item item) {
         if (item == null) return;
-        itemPools[item.craftText]?.Push(item);
+        if (!itemPools.TryGetValue(item.craftText, out var pool))
+            pool = (itemPools[item.craftText] = new Stack<Item>());
+        pool.Push(item);
         item.transform.SetParent(itemPool);
     }
 

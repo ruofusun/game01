@@ -7,16 +7,10 @@ public class ItemDragContainer : ItemSlotBase {
     public UnityEvent onDragStart;
     public UnityEvent onDragEnd;
 
-    public void Drag(Item item) {
-        if (Item != null) return;
-        Item = item;
-        onDragStart.Invoke();
-    }
-    
-    public void FinishDrag() {
-        if (Item == null) return;
-        onDragEnd.Invoke();
-        Item = null;
+    protected override void OnChangeItem(Item oldItem, Item newItem) {
+        base.OnChangeItem(oldItem, newItem);
+        if (oldItem != null) onDragEnd.Invoke();
+        if (newItem != null) onDragStart.Invoke();
     }
     
 }
