@@ -20,9 +20,34 @@ public class CraftPanel : MonoBehaviour {
     [SerializeField]
     private PropSlot resultSlot;
 
+    void Awake() {
+        isOpened = gameObject.activeSelf;
+    }
+
     void OnValidate() {
         if (recipeSlots != null && recipeSlots.Length != 9)
             Debug.LogError("[CraftPanel] Recipe Slots need a size of 9.", this);
+    }
+
+    private bool isOpened = false;
+    public bool IsPanelOpened {
+        get => isOpened;
+        set {
+            if (value) OpenPanel();
+            else ClosePanel();
+        }
+    }
+    
+    public void OpenPanel() {
+        isOpened = true;
+        gameObject.SetActive(true);
+        UpdateInventorySlots();
+    }
+
+    public void ClosePanel() {
+        isOpened = false;
+        gameObject.SetActive(false);
+        UpdateInventory();
     }
 
     #region Crafting
@@ -33,6 +58,30 @@ public class CraftPanel : MonoBehaviour {
             craftText += slot.CraftText;
         }
         resultSlot.PropInView = craftTable[craftText];
+    }
+
+    private void UpdateInventorySlots() {
+        
+    }
+
+    private void UpdateInventory() {
+        
+    }
+
+    public void CraftForPlayer(PlayerController player) {
+        if (player == null) return;
+        
+        foreach (var slot in recipeSlots) {
+            RecycleItem(slot.Item);
+            slot.Item = null;
+        }
+
+        var result = resultSlot.PropInView;
+
+        UpdateInventory();
+        UpdateInventorySlots();
+        
+        CheckCraftResult();
     }
 
     #endregion

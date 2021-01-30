@@ -19,9 +19,4 @@ public class PropSlot : MonoBehaviour
         }
     }
 
-    public void SpawnProp(PlayerController player) {
-        if (prop == null) return;
-        Instantiate(prop);
-    }
-    
 }
