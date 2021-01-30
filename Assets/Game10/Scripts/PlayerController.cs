@@ -9,20 +9,21 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpUpSpeed;
     public float gravityModifier = 1.5f;
-  //  public Transform shootingPoint;
-   // public GameObject growSpell;
+
     public Transform leftFoot;
     public Transform rightFoot;
+    public Transform throwPoint;
     public float damageCD = 2f;
 
-    //  bool inAir = false;
     bool grounded = true;
     bool faceRight = true;
     Rigidbody2D rb2d;
     SpriteRenderer sr;
     Collider2D playerCol;
-    //  LayerMask groundLayer;
-    // LayerMask platformLayer;
+
+    private Animator anim;
+
+    public GameObject bomb;
 
 
 
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         playerCol = GetComponent<Collider2D>();
+        anim = GetComponent<Animator>();
         // groundLayer = LayerMask.NameToLayer("Ground");
         // platformLayer = LayerMask.NameToLayer("Platform");
     }
@@ -80,6 +82,7 @@ public class PlayerController : MonoBehaviour
                 {
 
                     rb2d.velocity = new Vector2(rb2d.velocity.x * 0.2f, jumpUpSpeed);
+                    anim.SetTrigger("IsJump");
                     // inAir = true;
                 }
             }
@@ -97,6 +100,16 @@ public class PlayerController : MonoBehaviour
         //left right move
         if (grounded)
         {
+            if (Input.GetMouseButtonDown(0))
+            {
+               anim.SetTrigger("IsThrow");
+               GameObject b= Instantiate(bomb, throwPoint.position, Quaternion.identity);
+               b.GetComponent<BombController>().SetThrowDirection(faceRight);
+            }
+
+
+
+
             // inAir = false;
             if (Input.GetKey(KeyCode.A) && canTakeDamage)
             {
