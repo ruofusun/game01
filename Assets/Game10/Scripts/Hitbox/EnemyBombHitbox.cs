@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,9 +16,16 @@ public class EnemyBombHitbox : EnemyHitbox
       
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.gameObject.layer == targetLayerMask)
+        {
+            Global.GetHpManager().ReduceValue();
+        }
+        if (other.gameObject.layer == envLayerMask)
+        {
+           //kill blocks
+        }
+
     }
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3730196806241665737}
   - component: {fileID: 2699467960291243225}
+  - component: {fileID: 2350738193768725823}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -47,6 +48,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.015510559}
   serializedVersion: 2
   m_Radius: 1.2910361
+--- !u!114 &2350738193768725823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203397411797187039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb20c515f939cd948842a4c0d1f531d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6236961111510216620
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +75,7 @@ GameObject:
   - component: {fileID: 4123191188464866598}
   - component: {fileID: 4515366800018876622}
   m_Layer: 0
-  m_Name: Bomb
+  m_Name: EnemyBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,8 +175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07b4f1479a33344cb621c9fc1f30919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabPreview: {fileID: 0}
-  explodeTimer: 3
+  prefabItem: {fileID: 0}
+  explodeTimer: 1.5
 --- !u!50 &4123191188464866598
 Rigidbody2D:
   serializedVersion: 4

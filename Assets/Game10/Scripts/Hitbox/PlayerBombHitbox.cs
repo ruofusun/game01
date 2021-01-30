@@ -20,4 +20,17 @@ public class PlayerBombHitbox : PlayerHitbox
     {
         
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == targetLayerMask)
+        {
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.layer == envLayerMask)
+        {
+            //kill blocks
+        }
+
+    }
+    
 }
