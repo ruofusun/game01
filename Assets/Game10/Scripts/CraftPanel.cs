@@ -18,12 +18,24 @@ public class CraftPanel : MonoBehaviour {
     private Transform itemPool;
     
     [SerializeField]
-    private Transform resultSlot;
+    private PropSlot resultSlot;
 
     void OnValidate() {
         if (recipeSlots != null && recipeSlots.Length != 9)
             Debug.LogError("[CraftPanel] Recipe Slots need a size of 9.", this);
     }
+
+    #region Crafting
+
+    private void CheckCraftResult() {
+        string craftText = "";
+        foreach (var slot in recipeSlots) {
+            craftText += slot.CraftText;
+        }
+        resultSlot.PropInView = craftTable[craftText];
+    }
+
+    #endregion
 
     #region Dragging
 
@@ -31,16 +43,19 @@ public class CraftPanel : MonoBehaviour {
     
     public void DragItemFrom([NotNull] ItemSlotBase itemSlotBase, bool copy) {
         dragContainer.Item = ItemFrom(itemSlotBase, copy);
+        CheckCraftResult();
     }
 
     public void PutDraggedItem([NotNull] ItemSlotBase itemSlotBase, bool copy) {
         itemSlotBase.Item = ItemFrom(dragContainer, copy);
+        CheckCraftResult();
     }
     
     public void ExchangeDraggedItem([NotNull] ItemSlotBase itemSlotBase) {
         var tmpItem = itemSlotBase.Item;
         itemSlotBase.Item = dragContainer.Item;
         dragContainer.Item = tmpItem;
+        CheckCraftResult();
     }
     
     public void EndDragging() {

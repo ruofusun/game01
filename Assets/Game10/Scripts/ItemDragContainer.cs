@@ -9,8 +9,8 @@ public class ItemDragContainer : ItemSlotBase {
 
     protected override void OnChangeItem(Item oldItem, Item newItem) {
         base.OnChangeItem(oldItem, newItem);
-        if (oldItem != null) onDragEnd.Invoke();
-        if (newItem != null) onDragStart.Invoke();
+        if (oldItem != null && newItem == null) onDragEnd.Invoke();
+        if (newItem != null && oldItem == null) onDragStart.Invoke();
     }
     
 }

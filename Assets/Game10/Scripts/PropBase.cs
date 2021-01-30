@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PropBase : MonoBehaviour
 {
-    public GameObject prefabPreview;
+    public ItemProp prefabItem;
 
     protected virtual void OnTriggerEnter(Collider other)
     {

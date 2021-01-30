@@ -14,6 +14,14 @@ public class CraftTable : ScriptableObject, IDisposable {
     private CraftTableParameters[] crafts;
     
     private readonly Dictionary<string, List<PropBase>> dictCrafts = new Dictionary<string, List<PropBase>>();
+
+    public PropBase this[string craftText] {
+        get {
+            if (dictCrafts.TryGetValue(craftText, out var list) && list.Count != 0)
+                return list[0];
+            return null;
+        }
+    }
     
     public void AddCraft(string recipe, PropBase result) {
         recipe = recipe.PadRight(9, '.').Substring(0, 9);
