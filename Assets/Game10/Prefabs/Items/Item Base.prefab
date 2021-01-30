@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   craftText: .
+  originalPrefab: {fileID: 1061800710309063776}
 --- !u!114 &8932348227329080250
 MonoBehaviour:
   m_ObjectHideFlags: 0
