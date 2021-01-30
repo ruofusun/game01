@@ -1,55 +1,22 @@
 fileFormatVersion: 2
-guid: a642f10e56831452a9c72760b4ad6ceb
+guid: aee7f6fdcd685224f8c21ee22cf1051d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8616810101610028595
-    second: Button_Tips_0
+      213: -6925692602502489872
+    second: Button_Tips_MouseClick_0
   - first:
-      213: 608400095197848957
-    second: Button_Tips_1
+      213: -917089600128317180
+    second: Button_Tips_MouseClick_1
   - first:
-      213: 8387815642635432920
-    second: Button_Tips_2
+      213: 2832768363071504059
+    second: Button_Tips_MouseClick_2
   - first:
-      213: -1398104361082196523
-    second: Button_Tips_3
+      213: -7382423763036296538
+    second: Button_Tips_MouseClick_3
   - first:
-      213: -3072410511586007272
-    second: Button_Tips_4
-  - first:
-      213: -2595228507020354377
-    second: Button_Tips_5
-  - first:
-      213: 2254998951315285572
-    second: Button_Tips_6
-  - first:
-      213: -8368011396206182523
-    second: Button_Tips_7
-  - first:
-      213: -1902711348584286669
-    second: Button_Tips_8
-  - first:
-      213: 3379103493563793556
-    second: Button_Tips_9
-  - first:
-      213: -280379259933111268
-    second: Button_Tips_10
-  - first:
-      213: 5249198769812080359
-    second: Button_Tips_11
-  - first:
-      213: -2450025191977267767
-    second: Button_Tips_12
-  - first:
-      213: -6408668630896644151
-    second: Button_Tips_13
-  - first:
-      213: 4795510584554593898
-    second: Button_Tips_14
-  - first:
-      213: 7709770985994017472
-    second: Button_Tips_15
+      213: -2766707535023311761
+    second: Button_Tips_MouseClick_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -135,7 +102,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Button_Tips_0
+      name: Button_Tips_MouseClick_0
       rect:
         serializedVersion: 2
         x: 0
@@ -149,14 +116,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc1698ccdd0fa6880800000000000000
-      internalID: -8616810101610028595
+      spriteID: 0f8d94c954ff2ef90800000000000000
+      internalID: -6925692602502489872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Button_Tips_1
+      name: Button_Tips_MouseClick_1
       rect:
         serializedVersion: 2
         x: 128
@@ -170,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d75e493c9a8717800800000000000000
-      internalID: 608400095197848957
+      spriteID: 409852d1ed7d543f0800000000000000
+      internalID: -917089600128317180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Button_Tips_2
+      name: Button_Tips_MouseClick_2
       rect:
         serializedVersion: 2
         x: 256
@@ -191,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d3ffbce2e1876470800000000000000
-      internalID: 8387815642635432920
+      spriteID: bbe77db41d3005720800000000000000
+      internalID: 2832768363071504059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Button_Tips_3
+      name: Button_Tips_MouseClick_3
       rect:
         serializedVersion: 2
         x: 384
@@ -212,8 +179,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dd65c6bd7fe89ce0800000000000000
-      internalID: -1398104361082196523
+      spriteID: 6aaa1d683bc5c8990800000000000000
+      internalID: -7382423763036296538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_Tips_MouseClick_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64f981d72eaa99d0800000000000000
+      internalID: -2766707535023311761
       vertices: []
       indices: 
       edges: []
