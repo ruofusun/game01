@@ -17,7 +17,7 @@ public class CraftTable : ScriptableObject, IDisposable {
     
     public void AddCraft(string recipe, PropBase result) {
         recipe = recipe.PadRight(9, '.').Substring(0, 9);
-        List<PropBase> listResult = dictCrafts[recipe] ?? (dictCrafts[recipe] = new List<PropBase>());
+        if (!dictCrafts.TryGetValue(recipe, out var listResult)) listResult = dictCrafts[recipe] = new List<PropBase>();
         listResult.Add(result);
     }
     
