@@ -51,7 +51,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DGD_Damaged
+  m_Name: DGD_BeHurt
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -116,7 +116,7 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 40, y: 280, z: 0}
+  m_AnyStatePosition: {x: 30, y: 280, z: 0}
   m_EntryPosition: {x: -10, y: 0, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
