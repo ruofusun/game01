@@ -9,7 +9,8 @@ public class ItemSlotBase : MonoBehaviour {
         get => item;
         set {
             item = value;
-            item.transform.SetParent(transform);
+            if (item != null)
+                item.transform.SetParent(transform);
         }
     }
 
