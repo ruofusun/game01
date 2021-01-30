@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
 using UnityEngine;
 
 public class Hitbox : MonoBehaviour
 {
+    protected LayerMask targetLayerMask;
+    protected LayerMask envLayerMask;
+    
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
-        
+        envLayerMask = LayerMask.NameToLayer("Ground");
     }
 
     // Update is called once per frame
@@ -17,7 +21,7 @@ public class Hitbox : MonoBehaviour
         
     }
 
-    protected void OnCollisionEnter2D(Collision2D other)
+    protected virtual void OnCollisionEnter2D(Collision2D other)
     {
         throw new NotImplementedException();
     }
