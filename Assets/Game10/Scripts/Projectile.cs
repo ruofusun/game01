@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,13 +20,11 @@ public class Projectile : MonoBehaviour
 
     private bool canMove = false;
     
-    
     // Start is called before the first frame update
     void Start()
     {
         origin = transform.position;
-        //temp
-        canMove = true;
+  
     }
 
  
@@ -77,9 +76,15 @@ public class Projectile : MonoBehaviour
     }
 
     //final point 
-    public void SetP3(Vector2 p)
+
+    public void SetControlPoint(Vector2 pp0, Vector2 pp1, Vector2 pp2, Vector2 pp3)
     {
-        p3 = p;
+        p0 = pp0;
+        p1 = pp1;
+        p2 = pp2;
+        p3 = pp3;
         canMove = true;
+
     }
+    
 }

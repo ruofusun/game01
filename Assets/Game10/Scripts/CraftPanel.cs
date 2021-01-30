@@ -9,7 +9,7 @@ public class CraftPanel : MonoBehaviour {
     public CraftTable craftTable;
     
     [SerializeField]
-    private ItemSlotBase[] recipeSlots;
+    private ItemSlot[] recipeSlots;
     
     [SerializeField]
     private ItemDragContainer dragContainer;
@@ -26,31 +26,15 @@ public class CraftPanel : MonoBehaviour {
     }
 
     #region Dragging
-
-    public bool IsDraggingItem => dragContainer.Item != null;
     
-    public void DragItemFrom([NotNull] ItemSlotBase itemSlotBase, bool copy) {
-        if (IsDraggingItem) EndDragging();
-        dragContainer.Drag(copy ? MakeItem(itemSlotBase.Item) : itemSlotBase.Item);
-        if (!copy) ClearSlot(itemSlotBase);
+    public void StartDragging([NotNull] ItemSlot itemSlot) {
+        dragContainer.Drag(MakeItem(itemSlot.Item));
     }
 
-    public void PutDraggedItem([NotNull] ItemSlotBase itemSlotBase, bool copy) {
-        itemSlotBase.Item = copy ? MakeItem(dragContainer.Item) : dragContainer.Item;
-        if (!copy) EndDragging();
+    public void PutDraggedItem([NotNull] ItemSlot itemSlot) {
+        itemSlot.Item = MakeItem(dragContainer.Item);
     }
     
-    public void ExchangeDraggedItem([NotNull] ItemSlotBase itemSlotBase) {
-        var tmpItem = itemSlotBase.Item;
-        itemSlotBase.Item = dragContainer.Item;
-        dragContainer.Item = tmpItem;
-        if (dragContainer.Item == null) dragContainer.FinishDrag();
-    }
-    
-    public void ClearSlot([NotNull] ItemSlotBase itemSlotBase) {
-        RecycleItem(itemSlotBase.Item);
-    }
-
     public void EndDragging() {
         RecycleItem(dragContainer.Item);
         dragContainer.FinishDrag();
@@ -62,15 +46,13 @@ public class CraftPanel : MonoBehaviour {
 
     private readonly Dictionary<string, Stack<Item>> itemPools = new Dictionary<string, Stack<Item>>();
 
-    private Item MakeItem(Item item) {
-        if (item == null) return null;
+    private Item MakeItem([NotNull] Item item) {
         if (!itemPools.TryGetValue(item.craftText, out var pool))
             pool = (itemPools[item.craftText] = new Stack<Item>());
         return pool.PeekAndPop() ?? Instantiate(item);
     }
     
-    private void RecycleItem(Item item) {
-        if (item == null) return;
+    private void RecycleItem([NotNull] Item item) {
         itemPools[item.craftText]?.Push(item);
         item.transform.SetParent(transformPool);
     }
