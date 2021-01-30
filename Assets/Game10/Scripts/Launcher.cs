@@ -30,8 +30,8 @@ public class Launcher : MonoBehaviour
         GameObject i = Instantiate(item, transform.position, Quaternion.identity);
         i.transform.RotateAround(i.transform.position, Vector3.forward, Vector2.SignedAngle(Vector2.right, dir));
 
-     //   if(type==itemType.javeline)
-         //   i.GetComponent<JavelinController>().SetDir(dir);
+       if(type==itemType.javeline)
+           i.GetComponent<JavelinController>().SetProjectilePoint((Vector2)transform.position+dir);
         
     }
 }
