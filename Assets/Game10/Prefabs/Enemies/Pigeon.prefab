@@ -218,6 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336deb9d102e42f4592c6a42de2193a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bomb: {fileID: 6236961111510216620, guid: adf24ce7205904c5984dfff25e31ea30, type: 3}
+  bomb: {fileID: 6236961111510216620, guid: 111d9521491205d4fa12725bb711a69b, type: 3}
   bombCD: 3
   canThrow: 1

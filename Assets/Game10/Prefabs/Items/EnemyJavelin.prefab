@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 54760644167360487}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyJavelin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1386042503575726505}
   - component: {fileID: 1983308316703356044}
   - component: {fileID: 3128409159503156665}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.27752137, y: -0.2560411}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 5675781280643028491}
   - component: {fileID: 6504181274992120649}
   - component: {fileID: 4808484785537785631}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Javelin
   m_TagString: Untagged
   m_Icon: {fileID: 0}

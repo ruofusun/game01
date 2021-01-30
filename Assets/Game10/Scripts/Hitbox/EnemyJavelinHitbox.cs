@@ -11,10 +11,16 @@ public class EnemyJavelinHitbox : EnemyHitbox
     }
     protected override void OnCollisionEnter2D(Collision2D other)
     {
+       
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         if (other.gameObject.layer == targetLayerMask)
         {
             Global.GetHpManager().ReduceValue();
         }
+        if(other.gameObject.layer!= LayerMask.NameToLayer("Enemy"))
+            Destroy(transform.parent.gameObject);
     }
 
     // Update is called once per frame
