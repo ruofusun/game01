@@ -30,7 +30,7 @@ public class UIFollowCursor : MonoBehaviour {
         else
         {
             //Canvas is in Overlay mode
-            Vector2 anchorPos = Input.mousePosition - rectTransform.parent.position;
+            Vector2 anchorPos = (Vector2)Input.mousePosition - ((RectTransform)rectTransform.parent).anchoredPosition;
             Vector2 lossyScale = rectTransform.lossyScale;
             return anchorPos / lossyScale;
         }
