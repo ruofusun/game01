@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // todo: if mouse on the back of player, rotate player, always shoot in the forward direction
@@ -9,11 +10,12 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpUpSpeed;
     public float gravityModifier = 1.5f;
+    public float accelerationInAir = 15f;
 
     public Transform leftFoot;
     public Transform rightFoot;
     public Transform throwPoint;
-    public float damageCD = 2f;
+    public float damageCD = 1f;
 
     bool grounded = true;
     bool faceRight = true;
@@ -39,8 +41,6 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
-    float moveVel;//temp use
     void Update()
     {
         // Debug.DrawRay(leftFoot.position, Vector2.down, Color.white);
@@ -88,19 +88,16 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        //modify jump gravity when falling 
-        if (!grounded && rb2d.velocity.y < 0)
+        //modify jump gravity when falling or jump key released
+        if (!grounded && (rb2d.velocity.y < 0 || !Input.GetKey(KeyCode.Space)))
         {
             rb2d.AddForce(new Vector2(0, -9.81f * gravityModifier));
 
         }
 
 
-        moveVel = 0;
+        float moveVel = 0;
         //left right move
-        if (grounded)
-        {
-            
           /*  if (Input.GetMouseButtonDown(0))
             {
                anim.SetTrigger("IsThrow");
@@ -108,25 +105,22 @@ public class PlayerController : MonoBehaviour
                b.GetComponent<BombController>().SetThrowDirection(faceRight);
             }
 */
-
-
-
-            // inAir = false;
-            if (Input.GetKey(KeyCode.A) && canTakeDamage)
-            {
-                moveVel = -speed;
-                faceRight = false;
-            }
-            if (Input.GetKey(KeyCode.D) && canTakeDamage)
-            {
-                moveVel = speed;
-                faceRight = true;
-            }
-            if (rb2d)
-            {
-                rb2d.velocity = new Vector2(moveVel, rb2d.velocity.y);
-            }
+        // inAir = false;
+        if (Input.GetKey(KeyCode.A) && canTakeDamage)
+        {
+            moveVel = Mathf.MoveTowards(rb2d.velocity.x, -speed, (grounded ? 99999 : accelerationInAir) * Time.deltaTime);
+            faceRight = false;
         }
+        if (Input.GetKey(KeyCode.D) && canTakeDamage)
+        {
+            moveVel = Mathf.MoveTowards(rb2d.velocity.x, speed, (grounded ? 99999 : accelerationInAir) * Time.deltaTime);
+            faceRight = true;
+        }
+        if (rb2d)
+        {
+            rb2d.velocity = new Vector2(moveVel, rb2d.velocity.y);
+        }
+        
         if (sr)
         {
             UpdateFaceDirection(faceRight);
@@ -157,8 +151,9 @@ public class PlayerController : MonoBehaviour
     bool canTakeDamage = true;
     public void OnDamaged(Vector2 ori)
     {
-     /*   if (canTakeDamage)
+        if (canTakeDamage)
         {
+            anim.SetTrigger("IsHurt");
             HPManager hPManager = Global.GetHpManager();
             hPManager.ReduceValue();
             canTakeDamage = false;
@@ -169,26 +164,26 @@ public class PlayerController : MonoBehaviour
             {
                 if (grounded)
                 {
-                    rb2d.AddForce(new Vector2(-100, 200));
+                    rb2d.AddForce(new Vector2(-4, 6),ForceMode2D.Impulse);
                 }
-                else
-                {
-                    rb2d.AddForce(new Vector2(-50, 0));
-                }
+             //   else
+              //  {
+               //     rb2d.AddForce(new Vector2(-50, 0));
+               // }
             }
             else
             {
                 if (grounded)
                 {
-                    rb2d.AddForce(new Vector2(100, 200));
+                    rb2d.AddForce(new Vector2(4, 6), ForceMode2D.Impulse);
                 }
-                else
-                {
-                    rb2d.AddForce(new Vector2(50, 0));
-                }
+               // else
+               // {
+                 //   rb2d.AddForce(new Vector2(50, 0));
+               // }
             }
         }
-        */
+        
     }
 
     IEnumerator DamageCd()
@@ -197,5 +192,14 @@ public class PlayerController : MonoBehaviour
         canTakeDamage = true;
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log(other.gameObject.layer);
+        //enemy check
+        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            OnDamaged(other.transform.position);
+        }
+    }
 }
     

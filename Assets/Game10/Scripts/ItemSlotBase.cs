@@ -13,6 +13,8 @@ public class ItemSlotBase : MonoBehaviour {
         }
     }
 
+    public Item ItemPrefab => item == null ? null : item.originalPrefab;
+
     public string CraftText => item == null ? "." : item.craftText;
 
     public bool useCurrentChild = true;
