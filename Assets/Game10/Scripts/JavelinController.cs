@@ -24,7 +24,7 @@ public class JavelinController : PropBase
 
     protected override void OnTriggerEnter(Collider other)
     {
-        base.OnTriggerEnter(other);
+      Destroy(gameObject);
     }
 
     // Update is called once per frame
