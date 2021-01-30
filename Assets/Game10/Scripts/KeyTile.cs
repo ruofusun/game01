@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class KeyTile : MonoBehaviour
 {
 
     public GameObject tp;
+    public Vector3 tpPositionDistance = new Vector3(0.85f, 2.2f, 0f); 
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +25,8 @@ public class KeyTile : MonoBehaviour
         if(other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             Destroy(gameObject);
-            tp.AppearTp(true, transform.position);
+            Instantiate(tp, transform.position + tpPositionDistance, transform.rotation);
+
         }
 
 
