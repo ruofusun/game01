@@ -9,6 +9,10 @@ public class ShovelController : PropBase {
     
     private static readonly int dig = Animator.StringToHash("Dig");
 
+    public void EndUse() {
+        blockFound = true;
+    }
+
     protected override void OnUse() {
         blockFound = false;
         animator.SetTrigger(dig);

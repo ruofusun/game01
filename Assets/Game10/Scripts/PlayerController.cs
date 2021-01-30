@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //modify jump gravity when falling or jump key released
-        if (!grounded && (rb2d.velocity.y < 0 || !Input.GetKey(KeyCode.Space)))
+        if (!grounded && (rb2d.velocity.y < 0 || (!Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.W))))
         {
             rb2d.AddForce(new Vector2(0, -9.81f * gravityModifier));
             if (rb2d.velocity.y < 0)
@@ -110,8 +110,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-
-        float moveVel = 0;
         //left right move
           /*  if (Input.GetMouseButtonDown(0))
             {
@@ -121,6 +119,8 @@ public class PlayerController : MonoBehaviour
             }
 */
         // inAir = false;
+        
+        float moveVel = 0;
         if (Input.GetKey(KeyCode.A) && canTakeDamage)
         {
             moveVel = Mathf.MoveTowards(rb2d.velocity.x, -speed, (grounded ? 99999 : accelerationInAir) * Time.deltaTime);
