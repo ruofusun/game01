@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1062116899880623549}
   - component: {fileID: 2504987982885980326}
   - component: {fileID: 288222866312881116}
-  - component: {fileID: 4921946374753434545}
   - component: {fileID: 790842351524218861}
   m_Layer: 5
   m_Name: Button_Done
@@ -121,21 +120,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!111 &4921946374753434545
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7443657285486860268}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 444f6fdf8d5fa4e239cbe27e51310ab1, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &790842351524218861
 Animator:
   serializedVersion: 3
