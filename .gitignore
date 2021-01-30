@@ -70,3 +70,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Game10/Artworks/Sprites/Character/Enemy_Gezi.png.meta
+Assets/Game10/Artworks/Sprites/Items/32x32biaoqiang.png.meta
+Assets/Game10/Artworks/Sprites/Character/Boss.png.meta
+Assets/Game10/Artworks/Sprites/Items/UI_Line.png.meta
