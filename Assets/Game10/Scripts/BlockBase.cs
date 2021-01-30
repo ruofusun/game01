@@ -15,7 +15,7 @@ public class BlockBase : MonoBehaviour
     protected BlockType _blockType = BlockType.zero;
     public GameObject blockContent;
 
-    protected virtual Item GetItem()
+    public virtual Item GetItem()
     {
         return null;
     }

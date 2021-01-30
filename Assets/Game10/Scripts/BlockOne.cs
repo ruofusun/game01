@@ -17,7 +17,7 @@ public class BlockOne : BlockBase
         base.OnCollisionEnter(other);
     }
 
-    protected override Item GetItem()
+    public override Item GetItem()
     {
         if (Random.Range(0f, 1f) < 0.5f)
         {

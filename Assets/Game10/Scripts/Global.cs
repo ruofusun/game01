@@ -23,6 +23,8 @@ public class Global : MonoBehaviour
            hpManager = FindObjectOfType<HPManager>();
         return hpManager;
     }
+
+    public static Inventory GetInventory() => Inventory.Inst;
     
     // Start is called before the first frame update
     void Start()

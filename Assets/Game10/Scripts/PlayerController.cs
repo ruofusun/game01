@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
     bool grounded = true;
     bool faceRight = true;
+    bool fallingDown = false;
     Rigidbody2D rb2d;
     SpriteRenderer sr;
     Collider2D playerCol;
@@ -27,7 +28,11 @@ public class PlayerController : MonoBehaviour
 
     public GameObject bomb;
 
+    public Animator PlayerAnimator => anim;
 
+    public bool IsGrounded => grounded;
+    public bool IsInAir => !grounded;
+    public bool IsFallingDown => fallingDown;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +58,11 @@ public class PlayerController : MonoBehaviour
       //  RaycastHit2D p_right = Physics2D.Raycast(rightFoot.position, Vector2.down, 0.1f, LayerMask.GetMask("Platform"));
         if (g_left.collider || g_right.collider)
         {
+            if (!grounded)
+            {
+                if (!fallingDown) anim.SetTrigger("IsJumpDown");
+                anim.SetTrigger("IsBackGround");
+            }
             grounded = true;
         }
         else
@@ -83,6 +93,7 @@ public class PlayerController : MonoBehaviour
 
                     rb2d.velocity = new Vector2(rb2d.velocity.x * 0.2f, jumpUpSpeed);
                     anim.SetTrigger("IsJump");
+                    fallingDown = false;
                     // inAir = true;
                 }
             }
@@ -92,7 +103,11 @@ public class PlayerController : MonoBehaviour
         if (!grounded && (rb2d.velocity.y < 0 || !Input.GetKey(KeyCode.Space)))
         {
             rb2d.AddForce(new Vector2(0, -9.81f * gravityModifier));
-
+            if (rb2d.velocity.y < 0)
+            {
+                if (!fallingDown) anim.SetTrigger("IsJumpDown");
+                fallingDown = true;
+            }
         }
 
 
