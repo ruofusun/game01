@@ -17,6 +17,23 @@ public class Inventory : MonoBehaviour {
 
     private float StaminaChangeSpeed => isInBulletTime ? staminaCostSpeed : staminaRecoverSpeed;
 
+    public void AddItem(Item item) {
+        if (items.Count < 9) items.Add(item);
+    }
+
+    private static Inventory instance;
+    public static Inventory Inst {
+        get {
+            if (instance == null)
+                instance = FindObjectOfType<Inventory>();
+            return instance;
+        }
+    }
+
+    void Awake() {
+        instance = this;
+    }
+
     void Start() {
         foreach (var item in initialItems) {
             items.Add(item);

@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 6262926524933407571}
   - component: {fileID: 6262926524933407568}
   - component: {fileID: 6262926524933407565}
+  - component: {fileID: 2745176618744981257}
   - component: {fileID: 994845112948871650}
   m_Layer: 8
   m_Name: Player
@@ -238,6 +239,19 @@ MonoBehaviour:
   throwPoint: {fileID: 0}
   damageCD: 2
   bomb: {fileID: 0}
+--- !u!114 &2745176618744981257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6262926524933407574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554f80e5f6a4c5648ac000ed1bc40bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdPoint: {fileID: 4937178355286984450}
 --- !u!95 &994845112948871650
 Animator:
   serializedVersion: 3

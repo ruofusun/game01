@@ -15,11 +15,22 @@ public class PlayerJavelinHitbox : PlayerHitbox
 
     protected override void OnCollisionEnter2D(Collision2D other)
     {
+
+      
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         if (other.gameObject.layer == targetLayerMask)
         {
-           Destroy(other.gameObject);   
+           Destroy(other.gameObject);
+            Destroy(transform.parent.gameObject);
         }
-      
+
+        if (other.gameObject.layer == envLayerMask)
+        {
+            Destroy(transform.parent.gameObject);
+        }
+
     }
     // Update is called once per frame
     void Update()

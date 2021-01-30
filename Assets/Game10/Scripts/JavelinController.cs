@@ -19,15 +19,10 @@ public class JavelinController : PropBase
     public void SetProjectilePoint(Vector2 playerPos)
     {
         _projectile = GetComponent<Projectile>();
-      _projectile.SetControlPoint(Vector2.zero, new Vector2(playerPos.x>0? 0.5f : -0.5f, 3),  new Vector2(playerPos.x-0.5f, 3 ), playerPos);
+      _projectile.SetControlPoint(Vector2.zero, new Vector2(playerPos.x>transform.position.x? 0.5f : -0.5f, 3),  new Vector2(playerPos.x-0.5f, 3 ), playerPos);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.layer!= LayerMask.NameToLayer("Enemy"))
-        Destroy(transform.parent.gameObject);
-    }
-    
+
 
     // Update is called once per frame
     void Update()

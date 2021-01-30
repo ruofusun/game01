@@ -18,7 +18,7 @@ public class BlockZero: BlockBase
             Instantiate(blockContent, transform.position, quaternion.identity);
         }
     }
-    protected override Item GetItem()
+    public override Item GetItem()
     {
         return blockContent.GetComponent<Item>();
     }

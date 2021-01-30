@@ -34,10 +34,9 @@ public class Projectile : MonoBehaviour
         if (canMove)
         {
             t += Time.deltaTime;
-            if (t < 1)
-            {
+           
                 Throw(t);
-            }
+            
         }
     }
 
@@ -46,11 +45,11 @@ public class Projectile : MonoBehaviour
         Vector2 delta = CalculateBezierPoint(t, p0, p1, p2, p3);
         if (toRight)
         {
-            transform.position = origin + new Vector3(delta.x, delta.y, 0);
+            transform.parent.transform.position = origin + new Vector3(delta.x, delta.y, 0);
         }
         else
         {
-            transform.position = origin + new Vector3(-delta.x, delta.y, 0);
+            transform.parent.transform.position = origin + new Vector3(-delta.x, delta.y, 0);
         }
 
     }
