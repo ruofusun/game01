@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ItemDragContainer : ItemSlotBase {
+public class ItemDragContainer : ItemSlot {
+    public bool instantiateItemOnDrag = false;
+    public bool destroyDraggedItemOnFinish = true;
+    
     public UnityEvent onDragStart;
     public UnityEvent onDragEnd;
 
     public void Drag(Item item) {
-        if (Item != null) return;
+        if (instantiateItemOnDrag) item = Instantiate(item);
         Item = item;
         onDragStart.Invoke();
     }
     
     public void FinishDrag() {
-        if (Item == null) return;
         onDragEnd.Invoke();
+        if (destroyDraggedItemOnFinish) Destroy(Item);
         Item = null;
     }
     
