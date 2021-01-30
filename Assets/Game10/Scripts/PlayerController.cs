@@ -100,13 +100,14 @@ public class PlayerController : MonoBehaviour
         //left right move
         if (grounded)
         {
-            if (Input.GetMouseButtonDown(0))
+            
+          /*  if (Input.GetMouseButtonDown(0))
             {
                anim.SetTrigger("IsThrow");
                GameObject b= Instantiate(bomb, throwPoint.position, Quaternion.identity);
                b.GetComponent<BombController>().SetThrowDirection(faceRight);
             }
-
+*/
 
 
 
