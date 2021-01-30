@@ -233,7 +233,9 @@ MonoBehaviour:
   gravityModifier: 1.5
   leftFoot: {fileID: 6262926523903419208}
   rightFoot: {fileID: 6262926523816602860}
+  throwPoint: {fileID: 0}
   damageCD: 2
+  bomb: {fileID: 0}
 --- !u!95 &994845112948871650
 Animator:
   serializedVersion: 3
