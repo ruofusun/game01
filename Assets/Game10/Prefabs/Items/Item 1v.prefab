@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: craftText
       value: '-'
       objectReference: {fileID: 0}
+    - target: {fileID: 1061800710309063776, guid: acede0b54a3ece649a83242c1f549b2a,
+        type: 3}
+      propertyPath: originalPrefab
+      value: 
+      objectReference: {fileID: 5602572435178851164}
     - target: {fileID: 6912136012172583963, guid: acede0b54a3ece649a83242c1f549b2a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,6 +72,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4862783605795039036}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5602572435178851164 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1061800710309063776, guid: acede0b54a3ece649a83242c1f549b2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4862783605795039036}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8077ad42c4e284997454bbee7b0732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8738231972185461056
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,6 +9,9 @@ public class CraftPanel : MonoBehaviour {
     public CraftTable craftTable;
     
     [SerializeField]
+    private ItemSlotBase[] inventorySlots;
+    
+    [SerializeField]
     private ItemSlotBase[] recipeSlots;
     
     [SerializeField]
@@ -20,14 +23,27 @@ public class CraftPanel : MonoBehaviour {
     [SerializeField]
     private PropSlot resultSlot;
 
+    public float minimumStaminaToOpen = 1;
+
+    private Inventory inventory;
+
     void Awake() {
         isOpened = gameObject.activeSelf;
+        inventory = FindObjectOfType<Inventory>();
     }
 
     void OnValidate() {
         if (recipeSlots != null && recipeSlots.Length != 9)
             Debug.LogError("[CraftPanel] Recipe Slots need a size of 9.", this);
     }
+    
+    void Update() {
+        if (ShouldClosePanel) {
+            ClosePanel();
+        }
+    }
+
+    #region Panel Open Close
 
     private bool isOpened = false;
     public bool IsPanelOpened {
@@ -37,18 +53,28 @@ public class CraftPanel : MonoBehaviour {
             else ClosePanel();
         }
     }
+
+    private bool CanOpenPanel => inventory != null && inventory.stamina > minimumStaminaToOpen;
+    private bool ShouldClosePanel => inventory == null || inventory.stamina < Mathf.Epsilon;
     
     public void OpenPanel() {
+        if (!CanOpenPanel) return;
         isOpened = true;
         gameObject.SetActive(true);
+        inventory.isInBulletTime = true;
+        Time.timeScale = 0;
         UpdateInventorySlots();
     }
 
     public void ClosePanel() {
         isOpened = false;
         gameObject.SetActive(false);
+        Time.timeScale = 1;
+        if (inventory != null) inventory.isInBulletTime = false;
         UpdateInventory();
     }
+    
+    #endregion
 
     #region Crafting
 
@@ -61,27 +87,40 @@ public class CraftPanel : MonoBehaviour {
     }
 
     private void UpdateInventorySlots() {
-        
+        if (inventory == null) return;
+        for (int i = 0; i < inventorySlots.Length; ++i) {
+            inventorySlots[i].Item = i < inventory.items.Count ? MakeItem(inventory.items[i]) : null;
+        }
+        for (int i = 0; i < recipeSlots.Length; ++i) {
+            recipeSlots[i].Item = null;
+        }
     }
 
     private void UpdateInventory() {
-        
+        if (inventory == null) return;
+        inventory.items.Clear();
+        foreach (var slot in inventorySlots) {
+            if (slot.Item == null) continue;
+            inventory.items.Add(slot.ItemPrefab);
+            RecycleItem(slot.Item);
+        }
+        foreach (var slot in recipeSlots) {
+            if (slot.Item == null) continue;
+            inventory.items.Add(slot.ItemPrefab);
+            RecycleItem(slot.Item);
+        }
     }
 
-    public void CraftForPlayer(PlayerController player) {
-        if (player == null) return;
-        
+    public void Craft() {
         foreach (var slot in recipeSlots) {
             RecycleItem(slot.Item);
             slot.Item = null;
         }
 
-        var result = resultSlot.PropInView;
+        inventory.prop = resultSlot.PropInView;
+        resultSlot.PropInView = null;
 
-        UpdateInventory();
-        UpdateInventorySlots();
-        
-        CheckCraftResult();
+        ClosePanel();
     }
 
     #endregion

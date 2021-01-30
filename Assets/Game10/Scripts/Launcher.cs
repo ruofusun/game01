@@ -31,7 +31,7 @@ public class Launcher : MonoBehaviour
         i.transform.RotateAround(i.transform.position, Vector3.forward, Vector2.SignedAngle(Vector2.right, dir));
 
        if(type==itemType.javeline)
-           i.GetComponent<JavelinController>().SetProjectilePoint((Vector2)transform.position+dir);
+           i.GetComponentInChildren<JavelinController>().SetProjectilePoint((Vector2)transform.position+dir);
         
     }
 }
