@@ -99,7 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b50456485e01042b5e50df3ec7c23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockContent: {fileID: 0}
+  blockContent: {fileID: 3967100221292521950, guid: 90173915e3289a341b343e254ad8112f,
+    type: 3}
+  secondBlockContent: {fileID: 3967100221292521950, guid: 2e014e48ce26b934c88cca2b6dbdca3b,
+    type: 3}
 --- !u!95 &4106585366323200849
 Animator:
   serializedVersion: 3
