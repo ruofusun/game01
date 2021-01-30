@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4309992245610598408}
   - component: {fileID: 4309992245610598409}
   - component: {fileID: 4309992245610598414}
-  - component: {fileID: 4309992245610598415}
   - component: {fileID: 4309992245610598412}
   m_Layer: 5
   m_Name: Button_Toolbar_One
@@ -122,21 +121,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!111 &4309992245610598415
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4309992245610598418}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 0bd678e42e68740d2a9470e8c890e9e1, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &4309992245610598412
 Animator:
   serializedVersion: 3
@@ -167,7 +151,6 @@ GameObject:
   - component: {fileID: 4309992246519203866}
   - component: {fileID: 4309992246519203862}
   - component: {fileID: 4309992246519203863}
-  - component: {fileID: 4309992246519203860}
   - component: {fileID: 4309992246519203861}
   m_Layer: 5
   m_Name: Toolbar_One_Ani
@@ -233,21 +216,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!111 &4309992246519203860
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4309992246519203867}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 85ad3baf09d78439ca070c7db6cb29bc, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &4309992246519203861
 Animator:
   serializedVersion: 3
