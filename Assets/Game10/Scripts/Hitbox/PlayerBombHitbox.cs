@@ -30,6 +30,10 @@ public class PlayerBombHitbox : PlayerHitbox
         {
             //kill blocks
         }
+        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            Destroy(other.gameObject);
+        }
 
     }
     
