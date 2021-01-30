@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: ae770b2e83aca41d1b6f60a92693e2c6
+guid: 751426d50dbac421e8ae0a4a18cf165b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7031770094763643287
-    second: 32x32biaoqiang_0
+      213: 3843494496588843301
+    second: 32x32canzit_0
   - first:
-      213: -6623612195375988775
-    second: 32x32biaoqiang_1
+      213: -5145275775784231359
+    second: 32x32canzit_1
   - first:
-      213: -2043770176606005185
-    second: 32x32biaoqiang_2
+      213: 1849019829709130906
+    second: 32x32canzit_2
   - first:
-      213: 3213776638238139177
-    second: 32x32biaoqiang_3
-  - first:
-      213: -1782421366275165704
-    second: 32x32biaoqiang_4
+      213: 582146753923880714
+    second: 32x32canzit_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -102,7 +99,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 32x32biaoqiang_0
+      name: 32x32canzit_0
       rect:
         serializedVersion: 2
         x: 0
@@ -116,14 +113,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7911a9035add59160800000000000000
-      internalID: 7031770094763643287
+      spriteID: 529c85581e5d65530800000000000000
+      internalID: 3843494496588843301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32biaoqiang_1
+      name: 32x32canzit_1
       rect:
         serializedVersion: 2
         x: 32
@@ -137,14 +134,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9df3bac3dc33414a0800000000000000
-      internalID: -6623612195375988775
+      spriteID: 14e55f851fe4898b0800000000000000
+      internalID: -5145275775784231359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32biaoqiang_2
+      name: 32x32canzit_2
       rect:
         serializedVersion: 2
         x: 64
@@ -158,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f389cdc4ad113a3e0800000000000000
-      internalID: -2043770176606005185
+      spriteID: a9c47741db909a910800000000000000
+      internalID: 1849019829709130906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32biaoqiang_3
+      name: 32x32canzit_3
       rect:
         serializedVersion: 2
         x: 96
@@ -179,29 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92322ad33d0a99c20800000000000000
-      internalID: 3213776638238139177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 32x32biaoqiang_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f13a1706319347e0800000000000000
-      internalID: -1782421366275165704
+      spriteID: a0797ca6363341800800000000000000
+      internalID: 582146753923880714
       vertices: []
       indices: 
       edges: []
