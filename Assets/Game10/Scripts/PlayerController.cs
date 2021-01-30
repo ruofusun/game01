@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // todo: if mouse on the back of player, rotate player, always shoot in the forward direction
@@ -13,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public Transform leftFoot;
     public Transform rightFoot;
     public Transform throwPoint;
-    public float damageCD = 2f;
+    public float damageCD = 1f;
 
     bool grounded = true;
     bool faceRight = true;
@@ -157,8 +158,9 @@ public class PlayerController : MonoBehaviour
     bool canTakeDamage = true;
     public void OnDamaged(Vector2 ori)
     {
-     /*   if (canTakeDamage)
+        if (canTakeDamage)
         {
+            anim.SetTrigger("IsHurt");
             HPManager hPManager = Global.GetHpManager();
             hPManager.ReduceValue();
             canTakeDamage = false;
@@ -169,26 +171,26 @@ public class PlayerController : MonoBehaviour
             {
                 if (grounded)
                 {
-                    rb2d.AddForce(new Vector2(-100, 200));
+                    rb2d.AddForce(new Vector2(-4, 6),ForceMode2D.Impulse);
                 }
-                else
-                {
-                    rb2d.AddForce(new Vector2(-50, 0));
-                }
+             //   else
+              //  {
+               //     rb2d.AddForce(new Vector2(-50, 0));
+               // }
             }
             else
             {
                 if (grounded)
                 {
-                    rb2d.AddForce(new Vector2(100, 200));
+                    rb2d.AddForce(new Vector2(4, 6), ForceMode2D.Impulse);
                 }
-                else
-                {
-                    rb2d.AddForce(new Vector2(50, 0));
-                }
+               // else
+               // {
+                 //   rb2d.AddForce(new Vector2(50, 0));
+               // }
             }
         }
-        */
+        
     }
 
     IEnumerator DamageCd()
@@ -197,5 +199,14 @@ public class PlayerController : MonoBehaviour
         canTakeDamage = true;
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log(other.gameObject.layer);
+        //enemy check
+        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            OnDamaged(other.transform.position);
+        }
+    }
 }
     
