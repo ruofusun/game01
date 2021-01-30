@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class PlayerJavelinHitbox : PlayerHitbox
@@ -14,6 +15,10 @@ public class PlayerJavelinHitbox : PlayerHitbox
 
     protected override void OnCollisionEnter2D(Collision2D other)
     {
+        if (other.gameObject.layer == targetLayerMask)
+        {
+           Destroy(other.gameObject);   
+        }
       
     }
     // Update is called once per frame
