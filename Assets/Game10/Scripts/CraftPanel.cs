@@ -29,7 +29,7 @@ public class CraftPanel : MonoBehaviour {
 
     void Awake() {
         isOpened = gameObject.activeSelf;
-        inventory = FindObjectOfType<Inventory>();
+        inventory = Global.GetInventory();
     }
 
     void OnValidate() {
