@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class EnemyJavelinHitbox : EnemyHitbox
@@ -18,9 +19,14 @@ public class EnemyJavelinHitbox : EnemyHitbox
         if (other.gameObject.layer == targetLayerMask)
         {
             Global.GetHpManager().ReduceValue();
-        }
-        if(other.gameObject.layer!= LayerMask.NameToLayer("Enemy"))
             Destroy(transform.parent.gameObject);
+        }
+
+        if (other.gameObject.layer == envLayerMask)
+        {
+            Destroy(transform.parent.gameObject);
+        }
+
     }
 
     // Update is called once per frame
