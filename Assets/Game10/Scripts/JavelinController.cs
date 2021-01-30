@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,11 +22,11 @@ public class JavelinController : PropBase
       _projectile.SetControlPoint(Vector2.zero, new Vector2(playerPos.x>0? 0.5f : -0.5f, 3),  new Vector2(playerPos.x-0.5f, 3 ), playerPos);
     }
 
-
-    protected override void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-      Destroy(gameObject);
+        Destroy(gameObject);
     }
+    
 
     // Update is called once per frame
     void Update()
