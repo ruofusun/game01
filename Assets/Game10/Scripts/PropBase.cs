@@ -11,4 +11,9 @@ public class PropBase : MonoBehaviour
     {
         
     }
+
+    protected virtual void OnUse()
+    {
+        
+    }
 }
