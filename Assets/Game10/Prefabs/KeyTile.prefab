@@ -143,4 +143,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tp: {fileID: 4324580946748494196, guid: 34ae37ebe613b436eb5ff01fb9422abb, type: 3}
-  tpDistance: {x: 0.85, y: 2.2, z: 0}
+  tpPositionDistance: {x: 0.85, y: 2.2, z: 0}
