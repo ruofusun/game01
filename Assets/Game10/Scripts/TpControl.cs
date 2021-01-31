@@ -7,13 +7,15 @@ public class TpControl : MonoBehaviour
 {
     public Animator ani;
     //Vector3 vector3;
-    public Vector3 birthPoint;
-    public Vector3 tpDistance;
+    public Vector3 tpDistance = new Vector3(10f, 0f, 0f);
+    public Vector3 cameraMove = new Vector3(35f, 0f, 0f);
+    public Transform maincam;
 
 
     private void Start()
     {
        // this.gameObject.SetActive(false);
+       maincam = GameObject.Find("Main Camera").GetComponent<Transform>();
     }
     
     /*
@@ -34,12 +36,13 @@ public class TpControl : MonoBehaviour
         {
             ani.SetBool("IsTp", true);
 
-            birthPoint += tpDistance;
         }
     }
 
     public  void ChangeScene() {
-        Global.GetPlayer().transform.position = birthPoint;
+        maincam.transform.position += cameraMove;
+        Global.GetPlayer().transform.position = maincam.transform.position - tpDistance;
+        Destroy(gameObject);
     }
 
 }

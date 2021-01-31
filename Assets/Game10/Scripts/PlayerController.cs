@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     public float damageCD = 1f;
 
     bool grounded = true;
-   public bool faceRight = true;
+    public bool faceRight = true;
     bool fallingDown = false;
     Rigidbody2D rb2d;
     SpriteRenderer sr;
@@ -48,6 +48,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        //MoveAniSwitch
+
         // Debug.DrawRay(leftFoot.position, Vector2.down, Color.white);
 
 
@@ -60,8 +62,11 @@ public class PlayerController : MonoBehaviour
         {
             if (!grounded)
             {
-                if (!fallingDown) anim.SetTrigger("IsJumpDown");
-                anim.SetTrigger("IsBackGround");
+                if (!fallingDown)
+                    anim.SetBool("IsJumpDown", rb2d.velocity.y < 0 && !grounded);
+                //if (!fallingDown) anim.SetTrigger("IsJumpDown");
+                //anim.SetBool("IsBackGround_B",grounded);
+                //anim.SetTrigger("IsBackGround");
             }
             grounded = true;
         }
@@ -92,6 +97,7 @@ public class PlayerController : MonoBehaviour
                 {
 
                     rb2d.velocity = new Vector2(rb2d.velocity.x * 0.2f, jumpUpSpeed);
+
                     anim.SetTrigger("IsJump");
                     fallingDown = false;
                     // inAir = true;
@@ -102,10 +108,12 @@ public class PlayerController : MonoBehaviour
         //modify jump gravity when falling or jump key released
         if (!grounded && (rb2d.velocity.y < 0 || (!Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.W))))
         {
+            
             rb2d.AddForce(new Vector2(0, -9.81f * gravityModifier));
             if (rb2d.velocity.y < 0)
             {
-                if (!fallingDown) anim.SetTrigger("IsJumpDown");
+                if (!fallingDown) 
+               // anim.SetBool("IsJumpDown", rb2d.velocity.y < 0 && !grounded);
                 fallingDown = true;
             }
         }
@@ -135,11 +143,22 @@ public class PlayerController : MonoBehaviour
         {
             rb2d.velocity = new Vector2(moveVel, rb2d.velocity.y);
         }
-        
+        if (grounded)
+        {
+            anim.SetBool("IsWalk", rb2d.velocity.x != 0 &&grounded);
+            //Debug.Log(grounded);
+            //Debug.Log(rb2d.velocity.x);
+        }
+        Debug.Log(rb2d.velocity.y);
+        //anim.SetBool("IsJumpUp",rb2d.velocity.x>0);
+        anim.SetBool("IsBackGround_B", grounded);
+        anim.SetBool("IsJumpDown", rb2d.velocity.y < 0 );
+
         if (sr)
         {
             UpdateFaceDirection(faceRight);
         }
+    
     }
 
 
