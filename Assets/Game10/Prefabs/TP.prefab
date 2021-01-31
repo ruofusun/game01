@@ -116,8 +116,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ani: {fileID: 8027467806763315609}
-  birthPoint: {x: -10, y: 0, z: 0}
   tpDistance: {x: 0, y: 0, z: 0}
+  cameraMove: {x: 24, y: 0, z: 0}
+  camera: {fileID: 0}
 --- !u!70 &8627953067565770610
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
