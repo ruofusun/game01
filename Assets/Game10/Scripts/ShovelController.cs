@@ -26,6 +26,7 @@ public class ShovelController : PropBase {
         if (block == null) return;
         blockFound = true;
         block.DestroyAndDrop();
+        Destroy(gameObject);
     }
 
     void Awake() {
