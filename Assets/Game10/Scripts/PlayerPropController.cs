@@ -53,7 +53,7 @@ public class PlayerPropController : MonoBehaviour {
             SetPropFromPrefab(inventory.prop);
         }
 
-        if (Input.GetMouseButtonDown(0) && prop != null) {
+        if (Input.GetMouseButtonDown(0) && prop != null && !inventory.isInBulletTime) {
             // ReSharper disable once ReplaceWithSingleAssignment.False
             bool canUse = false;
             if (player.IsGrounded && prop.allowUseOnGround) canUse = true;
