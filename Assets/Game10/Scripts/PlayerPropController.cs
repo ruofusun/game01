@@ -28,6 +28,11 @@ public class PlayerPropController : MonoBehaviour {
         trans.localPosition = Vector3.zero;
         trans.localScale = Vector3.one;
         trans.localRotation = Quaternion.identity;
+        if (trans.GetComponent<BombController>())
+        {
+            trans.GetComponent<Rigidbody2D>().gravityScale = 0;
+            trans.GetComponent<CircleCollider2D>().isTrigger = true;
+        }
     }
     
     void Awake() {
@@ -47,6 +52,14 @@ public class PlayerPropController : MonoBehaviour {
             if (player.IsGrounded && prop.allowUseOnGround) canUse = true;
             if (player.IsInAir && prop.allowUseInAir) canUse = true;
             if (canUse) {
+                //bomb
+                Transform trans = prop.transform;
+                if (trans.GetComponent<BombController>())
+                {
+                    trans.GetComponent<Rigidbody2D>().gravityScale = 1;
+                    trans.GetComponent<CircleCollider2D>().isTrigger = false;
+                }
+                
                 prop.Use();
                 if(prop.animationTriggerOnUse!=String.Empty)
                 player.PlayerAnimator.SetTrigger(prop.animationTriggerOnUse);
