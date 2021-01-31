@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     public float damageCD = 1f;
 
     bool grounded = true;
-   public bool faceRight = true;
+    public bool faceRight = true;
     bool fallingDown = false;
     Rigidbody2D rb2d;
     SpriteRenderer sr;
@@ -108,7 +108,8 @@ public class PlayerController : MonoBehaviour
         //modify jump gravity when falling or jump key released
         if (!grounded && (rb2d.velocity.y < 0 || (!Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.W))))
         {
-            //rb2d.AddForce(new Vector2(0, -9.81f * gravityModifier));
+            
+            rb2d.AddForce(new Vector2(0, -9.81f * gravityModifier));
             if (rb2d.velocity.y < 0)
             {
                 if (!fallingDown) 
