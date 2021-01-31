@@ -109,7 +109,11 @@ public class BreezeMapCreater : MonoBehaviour
             else if (str[i] == '2') go = GameObject.Instantiate<GameObject>(b2);
             else if (str[i] == '?') go = GameObject.Instantiate<GameObject>(key);
             else go = new GameObject();
-            Destroy(go.GetComponent<Rigidbody2D>());
+            if(go.GetComponent<Rigidbody2D>()!=null){
+                go.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+
+            }
+            
             go.transform.SetParent(map);
             go.transform.position = new Vector3(thisPoint + 1.7f * i, heigh, 0);
             tran = go.transform;
