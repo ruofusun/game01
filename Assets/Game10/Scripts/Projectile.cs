@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         origin = transform.position;
-  
+
     }
 
  
@@ -46,16 +46,22 @@ public class Projectile : MonoBehaviour
         if (toRight)
         {
             transform.parent.transform.position = origin + new Vector3(delta.x, delta.y, 0);
+            transform.RotateAround(transform.position,Vector3.forward, 100*Time.deltaTime);
         }
         else
         {
-            transform.parent.transform.position = origin + new Vector3(-delta.x, delta.y, 0);
+            transform.parent.transform.position = origin + new Vector3(delta.x, delta.y, 0);
+            transform.RotateAround(transform.position,Vector3.forward, -100*Time.deltaTime);
         }
 
     }
     public void SetThrowDirection(bool dir)
     {
         toRight = dir;
+        if (!toRight)
+        {
+            transform.RotateAround(transform.position, Vector3.forward, 90);
+        }
     }
 
     Vector2 CalculateBezierPoint(float t, Vector2 p0, Vector2 p1, Vector2 p2, Vector2 p3)
