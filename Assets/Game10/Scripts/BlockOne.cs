@@ -5,7 +5,7 @@ using UnityEngine;
 public class BlockOne : BlockBase
 {
     public Drop otherDrop;
-    protected override Drop DropOnDestroy => Random.Range(0f, 1f) < 0.5f ? defaultDrop : otherDrop;
+    protected override Drop DropOnDestroy => Random.Range(0f, 1f) < 0.7f ? defaultDrop : otherDrop;
     
     // Start is called before the first frame update
     void Start()
