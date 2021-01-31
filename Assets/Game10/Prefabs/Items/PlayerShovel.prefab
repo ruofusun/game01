@@ -362,10 +362,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392e941170a6b1245b48ff5650d43cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabItem: {fileID: 0}
+  prefabItem: {fileID: 1858400227593060336, guid: 02a247f7ee98f6c46be83edf5880bcf0,
+    type: 3}
   animationTriggerOnUse: IsDig
   allowUseInAir: 0
   allowUseOnGround: 1
+  isPlayer: 1
 --- !u!50 &6712756309584595563
 Rigidbody2D:
   serializedVersion: 4
@@ -397,7 +399,7 @@ Animator:
   m_GameObject: {fileID: 7434967818263317250}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3235db3e715fb8a49a5a6d050bd65078, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2f269dadddf70ce4b81673aff3c46d43, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

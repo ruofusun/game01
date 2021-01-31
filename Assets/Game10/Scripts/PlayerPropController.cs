@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(PlayerController))]
 public class PlayerPropController : MonoBehaviour {
@@ -15,6 +16,26 @@ public class PlayerPropController : MonoBehaviour {
     private PlayerController player;
     
     private Inventory inventory;
+    public Drop[] drops;
+
+
+    private void Start()
+    {
+        StartCoroutine(nameof(DropZeroOne));
+    }
+
+    IEnumerator DropZeroOne()
+    {
+        while (true)
+        {
+            Drop.SpawnRelativeToPlayer(new Vector3(Random.Range(-5, 5), 20, 0), drops[0]);
+            yield return new WaitForSeconds(15f);
+            Drop.SpawnRelativeToPlayer(new Vector3(Random.Range(-5, 5), 20, 0), drops[1]);
+            yield return new WaitForSeconds(15f);
+            Drop.SpawnRelativeToPlayer(new Vector3(Random.Range(-5, 5), 20, 0), drops[2]);
+            yield return new WaitForSeconds(15f);
+        }
+    }
 
     private void SetPropFromPrefab(PropBase propPrefab) {
         if (prop != null) Destroy(prop);
@@ -45,7 +66,7 @@ public class PlayerPropController : MonoBehaviour {
     void Awake() {
         player = GetComponent<PlayerController>();
         inventory = Global.GetInventory();
-        SetPropFromPrefab(initProp);
+        inventory.prop = initProp;
     }
 
     void Update() {
@@ -53,7 +74,7 @@ public class PlayerPropController : MonoBehaviour {
             SetPropFromPrefab(inventory.prop);
         }
 
-        if (Input.GetMouseButtonDown(0) && prop != null) {
+        if (Input.GetMouseButtonDown(0) && prop != null && !inventory.isInBulletTime) {
             // ReSharper disable once ReplaceWithSingleAssignment.False
             bool canUse = false;
             if (player.IsGrounded && prop.allowUseOnGround) canUse = true;

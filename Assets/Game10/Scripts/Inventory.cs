@@ -41,7 +41,8 @@ public class Inventory : MonoBehaviour {
             items.Add(item);
             if (items.Count >= 9) break;
         }
-        prop = initialProp;
+        if (initialProp != null)
+            prop = initialProp;
     }
 
     void Update() {
