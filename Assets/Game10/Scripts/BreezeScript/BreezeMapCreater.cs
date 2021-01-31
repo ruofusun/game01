@@ -11,7 +11,7 @@ public class BreezeMapCreater : MonoBehaviour
     string levelE05 = "nnnnnnnnnnnnnnn";
     string levelE04 = "nnnnn010n01nnn0";
     string levelE03 = "nnnn0110nnnnnnn";
-    string levelE02 = "n1110000nnnnn1";
+    string levelE02 = "n11100001nnnn1";
     string levelE01 = "01001110n00100?";
 
     string levelD08 = "nnnnnnnnnnnnnnn";
@@ -25,12 +25,12 @@ public class BreezeMapCreater : MonoBehaviour
 
     string levelC08 = "nnnnn0nnnn1nnnn";
     string levelC07 = "nnnnn0nnnn0nnnn";
-    string levelC06 = "nnnnn0n000100nn";
+    string levelC06 = "nnnnnnn000100nn";
     string levelC05 = "nnnnnnnnnnnnnnn";
-    string levelC04 = "nnn000nnnn10111";
-    string levelC03 = "000101n0111n101";
-    string levelC02 = "000001n0101n11?";
-    string levelC01 = "000001n0101n111";
+    string levelC04 = "nnn000nnnnnnnnn";
+    string levelC03 = "000101n0111nnnn";
+    string levelC02 = "000001n0101n111";
+    string levelC01 = "000001n0101n11?";
 
     string levelB08 = "nnnnnnnnnnnnnnn";
     string levelB07 = "nnnnnnnnnnn1001";
@@ -109,7 +109,11 @@ public class BreezeMapCreater : MonoBehaviour
             else if (str[i] == '2') go = GameObject.Instantiate<GameObject>(b2);
             else if (str[i] == '?') go = GameObject.Instantiate<GameObject>(key);
             else go = new GameObject();
-            Destroy(go.GetComponent<Rigidbody2D>());
+            if(go.GetComponent<Rigidbody2D>()!=null){
+                go.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+
+            }
+            
             go.transform.SetParent(map);
             go.transform.position = new Vector3(thisPoint + 1.7f * i, heigh, 0);
             tran = go.transform;
