@@ -34,6 +34,7 @@ public class TpControl : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+
             ani.SetBool("IsTp", true);
 
         }
