@@ -1,7 +1,82 @@
 fileFormatVersion: 2
 guid: f3f53ef92d8669346abd9e810d3a19f6
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1418994772749598253
+    second: Enemy_PowerStrip_Dig_0
+  - first:
+      213: 8755384126894228948
+    second: Enemy_PowerStrip_Dig_1
+  - first:
+      213: 8761882347608924411
+    second: Enemy_PowerStrip_Dig_2
+  - first:
+      213: -32345174675090183
+    second: Enemy_PowerStrip_Dig_3
+  - first:
+      213: 3558864782164443070
+    second: Enemy_PowerStrip_Dig_4
+  - first:
+      213: 6399327472638285185
+    second: Enemy_PowerStrip_Dig_5
+  - first:
+      213: 6813355598403792687
+    second: Enemy_PowerStrip_Dig_6
+  - first:
+      213: -8513840791915903896
+    second: Enemy_PowerStrip_Dig_7
+  - first:
+      213: 753307397807653521
+    second: Enemy_PowerStrip_Dig_8
+  - first:
+      213: -2662653064234664911
+    second: Enemy_PowerStrip_Dig_9
+  - first:
+      213: -8438877357332777793
+    second: Enemy_PowerStrip_Dig_10
+  - first:
+      213: -2968011572698096328
+    second: Enemy_PowerStrip_Dig_11
+  - first:
+      213: -1453809085498100101
+    second: Enemy_PowerStrip_Dig_12
+  - first:
+      213: 4269684154430872225
+    second: Enemy_PowerStrip_Dig_13
+  - first:
+      213: -8115810588871698121
+    second: Enemy_PowerStrip_Dig_14
+  - first:
+      213: -5222138757739655557
+    second: Enemy_PowerStrip_Dig_15
+  - first:
+      213: -7946870375263797745
+    second: Enemy_PowerStrip_Dig_16
+  - first:
+      213: 372477638026396712
+    second: Enemy_PowerStrip_Dig_17
+  - first:
+      213: -3095084554541086281
+    second: Enemy_PowerStrip_Dig_18
+  - first:
+      213: 6218126379393395803
+    second: Enemy_PowerStrip_Dig_19
+  - first:
+      213: 835723188520363351
+    second: Enemy_PowerStrip_Dig_20
+  - first:
+      213: -6041871027642043008
+    second: Enemy_PowerStrip_Dig_21
+  - first:
+      213: -7725238066818495951
+    second: Enemy_PowerStrip_Dig_0
+  - first:
+      213: 5485670967363903413
+    second: Enemy_PowerStrip_Dig_1
+  - first:
+      213: -1451664051980199415
+    second: Enemy_PowerStrip_Dig_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +115,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -64,7 +139,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -73,7 +160,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_Dig_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a45f588e07ac490800000000000000
+      internalID: -7725238066818495951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_Dig_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf16643ea4012c40800000000000000
+      internalID: 5485670967363903413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_PowerStrip_Dig_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a14886c37aadbe0800000000000000
+      internalID: -1451664051980199415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
