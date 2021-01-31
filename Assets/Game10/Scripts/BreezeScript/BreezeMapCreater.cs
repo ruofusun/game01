@@ -12,7 +12,7 @@ public class BreezeMapCreater : MonoBehaviour
     string levelE04 = "nnnnn010n01nnn0";
     string levelE03 = "nnnn0110nnnnnnn";
     string levelE02 = "n11100001nnnn1";
-    string levelE01 = "01001110n00100?";
+    string levelE01 = "01001110n00100!";
 
     string levelD08 = "nnnnnnnnnnnnnnn";
     string levelD07 = "nnnnn10101nnnnn";
@@ -47,7 +47,7 @@ public class BreezeMapCreater : MonoBehaviour
     string levelA05 = "nnnnnnnnnnnnnnn";
     string levelA04 = "nnnnnnnnnnnnnnn";
     string levelA03 = "nnnnn1nnnnnnnnn";
-    string levelA02 = "012101112110101";
+    string levelA02 = "012111112110101";
     string levelA01 = "1022111111?0022";
 
     //关卡所有砖块，自己定义一下排列
@@ -58,6 +58,8 @@ public class BreezeMapCreater : MonoBehaviour
     GameObject key;
     GameObject wall;
     GameObject ground;
+
+    GameObject final;
 
     //0:0   1:1     2:倒过来的1     ?:? n:null
     Transform map;
@@ -71,6 +73,8 @@ public class BreezeMapCreater : MonoBehaviour
         key = GameObject.Find("Key");
         wall = GameObject.Find("Wall");
         ground = GameObject.Find("Ground");
+
+        final = GameObject.Find("Final");
 
         map = GameObject.Find("MapBreeze").transform;
         camera = GameObject.Find("Main Camera");
@@ -108,6 +112,7 @@ public class BreezeMapCreater : MonoBehaviour
             else if (str[i] == '1') go = GameObject.Instantiate<GameObject>(b1);
             else if (str[i] == '2') go = GameObject.Instantiate<GameObject>(b2);
             else if (str[i] == '?') go = GameObject.Instantiate<GameObject>(key);
+            else if (str[i] == '!') go = GameObject.Instantiate<GameObject>(final);   
             else go = new GameObject();
             if(go.GetComponent<Rigidbody2D>()!=null){
                 go.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;

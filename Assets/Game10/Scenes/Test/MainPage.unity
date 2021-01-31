@@ -315,7 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_Start: {fileID: 2032561981}
   btn_Close: {fileID: 2090730171}
-  sceneName: TestLevel
+  sceneName: Level
 --- !u!222 &771418996
 CanvasRenderer:
   m_ObjectHideFlags: 0
