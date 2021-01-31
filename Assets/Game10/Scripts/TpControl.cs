@@ -39,9 +39,17 @@ public class TpControl : MonoBehaviour
         }
     }
 
-    public  void ChangeScene() {
+    public void PlayerDisappear()
+
+    {
+        Global.GetPlayer().GetComponent<SpriteRenderer>().enabled = false;
+
+    }
+
+    public void ChangeScene() {
         maincam.transform.position += cameraMove;
-        Global.GetPlayer().transform.position = maincam.transform.position - tpDistance;
+        Global.GetPlayer().transform.position = maincam.transform.position + tpDistance;
+        Global.GetPlayer().GetComponent<SpriteRenderer>().enabled = true;
         Destroy(gameObject);
     }
 
