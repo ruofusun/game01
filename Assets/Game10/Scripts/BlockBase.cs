@@ -3,25 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlockBase : MonoBehaviour
-{
-
-  public enum BlockType
+public class BlockBase : MonoBehaviour {
+    public Drop defaultDrop;
+    
+    public enum BlockType
     {
         zero,
         one,
         special
     }
     protected BlockType _blockType = BlockType.zero;
-    public GameObject blockContent;
+    
+    protected virtual Drop DropOnDestroy => defaultDrop;
 
-    public virtual Item GetItem()
-    {
-        return null;
-    }
-
-    protected virtual void OnCollisionEnter(Collision other)
-    {
-        throw new NotImplementedException();
+    public void DestroyAndDrop() {
+        if (DropOnDestroy != null) Drop.SpawnAtTransform(transform, Vector3.zero, DropOnDestroy);
+        Destroy(gameObject);
     }
 }
