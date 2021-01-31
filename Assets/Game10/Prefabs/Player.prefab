@@ -254,6 +254,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdPoint: {fileID: 4937178355286984450}
   initProp: {fileID: 0}
+  drops:
+  - {fileID: 2335774917237682244, guid: 9305bf466083b40c0a8fbcee000774c7, type: 3}
+  - {fileID: 2736938343560839955, guid: 34b3e63677eaea4408f7a20df6610cd6, type: 3}
+  - {fileID: 7114147423982743126, guid: d8354d111ab19d746a61868796719a77, type: 3}
 --- !u!95 &994845112948871650
 Animator:
   serializedVersion: 3
