@@ -230,14 +230,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 966d43a6b021a4a019ad52dd89964145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 8
   jumpUpSpeed: 8
-  gravityModifier: 1.5
+  gravityModifier: 1
   accelerationInAir: 50
   leftFoot: {fileID: 6262926523903419208}
   rightFoot: {fileID: 6262926523816602860}
   throwPoint: {fileID: 0}
   damageCD: 2
+  faceRight: 1
   bomb: {fileID: 0}
 --- !u!114 &2745176618744981257
 MonoBehaviour:
@@ -252,6 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdPoint: {fileID: 4937178355286984450}
+  initProp: {fileID: 0}
 --- !u!95 &994845112948871650
 Animator:
   serializedVersion: 3
