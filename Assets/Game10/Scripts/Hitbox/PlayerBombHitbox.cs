@@ -30,9 +30,9 @@ public class PlayerBombHitbox : PlayerHitbox
         {
             //kill blocks
         }
-        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            Destroy(other.gameObject);
+           Global.GetHpManager().ReduceValue();
         }
 
     }

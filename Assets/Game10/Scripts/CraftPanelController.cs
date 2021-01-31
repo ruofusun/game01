@@ -7,7 +7,7 @@ public class CraftPanelController : MonoBehaviour {
     private CraftPanel panel;
     
     void Awake() {
-        panel = FindObjectOfType<CraftPanel>();
+        panel = GetComponentInChildren<CraftPanel>(true);
         if (!panel) {
             Debug.LogError("[CraftPanelController] Cannot find Craft Panel in scene");
             enabled = false;
