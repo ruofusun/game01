@@ -35,6 +35,11 @@ public class PlayerPropController : MonoBehaviour {
             rb.isKinematic = true;
             trans.GetComponent<CircleCollider2D>().isTrigger = true;
         }
+        if (trans.GetComponent<JavelinController>())
+        {
+            Rigidbody2D rb = trans.GetComponent<Rigidbody2D>();
+            rb.simulated = false;
+        }
     }
     
     void Awake() {
@@ -63,7 +68,13 @@ public class PlayerPropController : MonoBehaviour {
                     rb.isKinematic = false;
                     trans.GetComponent<CircleCollider2D>().isTrigger = false;
                 }
-                
+
+                if (trans.GetComponent<JavelinController>())
+                {
+                    Rigidbody2D rb = trans.GetComponent<Rigidbody2D>();
+                    rb.simulated = true;
+                }
+
                 prop.Use();
                 if(prop.animationTriggerOnUse!=String.Empty)
                 player.PlayerAnimator.SetTrigger(prop.animationTriggerOnUse);
