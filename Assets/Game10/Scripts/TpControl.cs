@@ -8,7 +8,7 @@ public class TpControl : MonoBehaviour
     public Animator ani;
     //Vector3 vector3;
     public Vector3 tpDistance = new Vector3(10f, 0f, 0f);
-    public Vector3 cameraMove = new Vector3(24f, 0f, 0f);
+    public Vector3 cameraMove = new Vector3(35f, 0f, 0f);
     public Transform maincam;
 
 
