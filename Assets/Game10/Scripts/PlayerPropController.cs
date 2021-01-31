@@ -45,7 +45,7 @@ public class PlayerPropController : MonoBehaviour {
     void Awake() {
         player = GetComponent<PlayerController>();
         inventory = Global.GetInventory();
-        SetPropFromPrefab(initProp);
+        inventory.prop = initProp;
     }
 
     void Update() {
