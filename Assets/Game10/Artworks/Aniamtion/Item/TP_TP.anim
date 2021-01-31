@@ -22,20 +22,20 @@ AnimationClip:
     - time: 0
       value: {fileID: -3210572781261362910, guid: b9fe7ed477ae24d78b73b430a112ab5f,
         type: 3}
-    - time: 0.16666667
+    - time: 0.125
       value: {fileID: 2991199798857405132, guid: b9fe7ed477ae24d78b73b430a112ab5f,
         type: 3}
-    - time: 0.33333334
+    - time: 0.25
       value: {fileID: -3332405300922784088, guid: b9fe7ed477ae24d78b73b430a112ab5f,
         type: 3}
-    - time: 0.5
+    - time: 0.375
       value: {fileID: 7489869175846669636, guid: b9fe7ed477ae24d78b73b430a112ab5f,
         type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 6
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -59,7 +59,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6666667
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -79,7 +79,14 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.5
+  - time: 0
+    functionName: PlayerDisappear
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.375
     functionName: ChangeScene
     data: 
     objectReferenceParameter: {fileID: 0}
