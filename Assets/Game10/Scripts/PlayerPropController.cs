@@ -29,11 +29,11 @@ public class PlayerPropController : MonoBehaviour {
         while (true)
         {
             Drop.SpawnRelativeToPlayer(new Vector3(Random.Range(-5, 5), 20, 0), drops[0]);
-            yield return new WaitForSeconds(15f);
+            yield return new WaitForSeconds(5f);
             Drop.SpawnRelativeToPlayer(new Vector3(Random.Range(-5, 5), 20, 0), drops[1]);
-            yield return new WaitForSeconds(15f);
+            yield return new WaitForSeconds(5f);
             Drop.SpawnRelativeToPlayer(new Vector3(Random.Range(-5, 5), 20, 0), drops[2]);
-            yield return new WaitForSeconds(15f);
+            yield return new WaitForSeconds(5f);
         }
     }
 
