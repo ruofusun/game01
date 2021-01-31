@@ -45,13 +45,31 @@ public class Projectile : MonoBehaviour
         Vector2 delta = CalculateBezierPoint(t, p0, p1, p2, p3);
         if (toRight)
         {
-            transform.parent.transform.position = origin + new Vector3(delta.x, delta.y, 0);
-            transform.RotateAround(transform.position,Vector3.forward, 100*Time.deltaTime);
+            if (transform.parent == null)
+            {
+                transform.position = origin + new Vector3(delta.x, delta.y, 0);
+                transform.RotateAround(transform.position,Vector3.forward, 100*Time.deltaTime);
+            }
+            else
+            {
+                
+                transform.parent.transform.position = origin + new Vector3(delta.x, delta.y, 0);
+                transform.RotateAround(transform.position,Vector3.forward, 100*Time.deltaTime);
+            }
         }
         else
         {
-            transform.parent.transform.position = origin + new Vector3(delta.x, delta.y, 0);
-            transform.RotateAround(transform.position,Vector3.forward, -100*Time.deltaTime);
+            if (transform.parent == null)
+            {
+                 transform.position = origin + new Vector3(delta.x, delta.y, 0);
+                transform.RotateAround(transform.position,Vector3.forward, -100*Time.deltaTime);
+            }
+            else
+            {
+                
+                transform.parent.transform.position = origin + new Vector3(delta.x, delta.y, 0);
+                transform.RotateAround(transform.position,Vector3.forward, -100*Time.deltaTime);
+            }
         }
 
     }
