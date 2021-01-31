@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ShovelController : PropBase {
+    public bool isPlayer = true;
+    
     private Animator animator;
     private bool blockFound = false;
     
@@ -23,7 +25,7 @@ public class ShovelController : PropBase {
         var block = other.attachedRigidbody?.GetComponent<BlockBase>();
         if (block == null) return;
         blockFound = true;
-        Global.GetInventory()?.AddItem(block.GetItem());
+        if (isPlayer) Global.GetInventory()?.AddItem(block.GetItem());
         Destroy(block.gameObject);
     }
 
