@@ -30,7 +30,9 @@ public class PlayerPropController : MonoBehaviour {
         trans.localRotation = Quaternion.identity;
         if (trans.GetComponent<BombController>())
         {
-            trans.GetComponent<Rigidbody2D>().gravityScale = 0;
+            Rigidbody2D rb = trans.GetComponent<Rigidbody2D>();
+            rb.gravityScale = 0;
+            rb.isKinematic = true;
             trans.GetComponent<CircleCollider2D>().isTrigger = true;
         }
     }
@@ -56,7 +58,9 @@ public class PlayerPropController : MonoBehaviour {
                 Transform trans = prop.transform;
                 if (trans.GetComponent<BombController>())
                 {
-                    trans.GetComponent<Rigidbody2D>().gravityScale = 1;
+                    Rigidbody2D rb = trans.GetComponent<Rigidbody2D>();
+                    rb.gravityScale = 1;
+                    rb.isKinematic = false;
                     trans.GetComponent<CircleCollider2D>().isTrigger = false;
                 }
                 
