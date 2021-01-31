@@ -27,7 +27,11 @@ public class Enemy_Teacher : MonoBehaviour
 
     }
     void changeChecck() {
-
+        var shovel =GetComponentInChildren<ShovelController>();
+        if (shovel!=null)
+        {
+            shovel.Use();
+        }
         CanCheck = true;
     }
 }
