@@ -24,7 +24,12 @@ public class EnemyBombHitbox : EnemyHitbox
         }
         if (other.gameObject.layer == envLayerMask)
         {
-           //kill blocks
+            //kill blocks
+            var block = other.GetComponent<BlockBase>();
+            if (block)
+            {
+                block.DestroyAndDrop();
+            }
         }
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {

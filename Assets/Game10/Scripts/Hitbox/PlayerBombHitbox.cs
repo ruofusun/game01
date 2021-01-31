@@ -29,6 +29,12 @@ public class PlayerBombHitbox : PlayerHitbox
         if (other.gameObject.layer == envLayerMask)
         {
             //kill blocks
+            var block = other.GetComponent<BlockBase>();
+            if (block)
+            {
+                block.DestroyAndDrop();
+            }
+
         }
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {

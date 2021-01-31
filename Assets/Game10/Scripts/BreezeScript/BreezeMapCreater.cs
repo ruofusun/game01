@@ -47,8 +47,8 @@ public class BreezeMapCreater : MonoBehaviour
     string levelA05 = "nnnnnnnnnnnnnnn";
     string levelA04 = "nnnnnnnnnnnnnnn";
     string levelA03 = "nnnnn1nnnnnnnnn";
-    string levelA02 = "0121011121?0101";
-    string levelA01 = "102211111110022";
+    string levelA02 = "012101112110101";
+    string levelA01 = "1022111111?0022";
 
     //关卡所有砖块，自己定义一下排列
 
