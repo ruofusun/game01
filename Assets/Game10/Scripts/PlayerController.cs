@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
             //Debug.Log(grounded);
             //Debug.Log(rb2d.velocity.x);
         }
-        Debug.Log(rb2d.velocity.y);
+        //Debug.Log(rb2d.velocity.y);
         //anim.SetBool("IsJumpUp",rb2d.velocity.x>0);
         anim.SetBool("IsBackGround_B", grounded);
         anim.SetBool("IsJumpDown", rb2d.velocity.y < 0 );

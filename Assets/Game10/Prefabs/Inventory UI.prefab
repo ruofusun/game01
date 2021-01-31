@@ -152,11 +152,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2438047216163723523}
-    - target: {fileID: 783964399066097178, guid: e1af058a6cee90b47802558e61a73ec6,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CraftForPlayer
-      objectReference: {fileID: 0}
     - target: {fileID: 4643204376994685633, guid: e1af058a6cee90b47802558e61a73ec6,
         type: 3}
       propertyPath: m_Enabled

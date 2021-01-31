@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Craft Table Niko Test
   m_EditorClassIdentifier: 
   crafts:
-  - recipe: .0..1..1.
-    result: {fileID: 2390050052286013787, guid: cbb04707152fc9645ba54b4f295661cf,
+  - recipe: .1..1..0.
+    result: {fileID: 8664608340583335052, guid: 2cf31022e1ff739479a234dbba15c96c,
       type: 3}
