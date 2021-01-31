@@ -32,56 +32,56 @@ MonoBehaviour:
     result: {fileID: 6236961111510216616, guid: adf24ce7205904c5984dfff25e31ea30,
       type: 3}
   - recipe: ---......
-    result: {fileID: 2390050052286013787, guid: cbb04707152fc9645ba54b4f295661cf,
+    result: {fileID: 7311076673406968709, guid: b9f00fcb04dcec04bb1c8f73b77d6360,
       type: 3}
   - recipe: ...---...
-    result: {fileID: 2390050052286013787, guid: cbb04707152fc9645ba54b4f295661cf,
+    result: {fileID: 7311076673406968709, guid: b9f00fcb04dcec04bb1c8f73b77d6360,
       type: 3}
   - recipe: ......---
-    result: {fileID: 2390050052286013787, guid: cbb04707152fc9645ba54b4f295661cf,
+    result: {fileID: 7311076673406968709, guid: b9f00fcb04dcec04bb1c8f73b77d6360,
       type: 3}
   - recipe: 1..1..1..
-    result: {fileID: 2390050052286013787, guid: cbb04707152fc9645ba54b4f295661cf,
+    result: {fileID: 7311076673406968709, guid: b9f00fcb04dcec04bb1c8f73b77d6360,
       type: 3}
   - recipe: .1..1..1.
-    result: {fileID: 2390050052286013787, guid: cbb04707152fc9645ba54b4f295661cf,
+    result: {fileID: 7311076673406968709, guid: b9f00fcb04dcec04bb1c8f73b77d6360,
       type: 3}
   - recipe: ..1..1..1
-    result: {fileID: 2390050052286013787, guid: cbb04707152fc9645ba54b4f295661cf,
+    result: {fileID: 7311076673406968709, guid: b9f00fcb04dcec04bb1c8f73b77d6360,
       type: 3}
   - recipe: 0--......
-    result: {fileID: 6236961111510216616, guid: adf24ce7205904c5984dfff25e31ea30,
+    result: {fileID: 8664608340583335052, guid: 2cf31022e1ff739479a234dbba15c96c,
       type: 3}
   - recipe: ...0--...
-    result: {fileID: 6236961111510216616, guid: adf24ce7205904c5984dfff25e31ea30,
+    result: {fileID: 8664608340583335052, guid: 2cf31022e1ff739479a234dbba15c96c,
       type: 3}
   - recipe: ......0--
-    result: {fileID: 6236961111510216616, guid: adf24ce7205904c5984dfff25e31ea30,
+    result: {fileID: 8664608340583335052, guid: 2cf31022e1ff739479a234dbba15c96c,
       type: 3}
   - recipe: 0..1..1..
-    result: {fileID: 6236961111510216616, guid: adf24ce7205904c5984dfff25e31ea30,
+    result: {fileID: 8664608340583335052, guid: 2cf31022e1ff739479a234dbba15c96c,
       type: 3}
   - recipe: .0..1..1.
-    result: {fileID: 6236961111510216616, guid: adf24ce7205904c5984dfff25e31ea30,
+    result: {fileID: 8664608340583335052, guid: 2cf31022e1ff739479a234dbba15c96c,
       type: 3}
   - recipe: ..0..1..1
-    result: {fileID: 6236961111510216616, guid: adf24ce7205904c5984dfff25e31ea30,
+    result: {fileID: 8664608340583335052, guid: 2cf31022e1ff739479a234dbba15c96c,
       type: 3}
   - recipe: --0......
-    result: {fileID: 6236961111510216616, guid: adf24ce7205904c5984dfff25e31ea30,
+    result: {fileID: 8664608340583335052, guid: 2cf31022e1ff739479a234dbba15c96c,
       type: 3}
   - recipe: ...--0...
-    result: {fileID: 6236961111510216616, guid: adf24ce7205904c5984dfff25e31ea30,
+    result: {fileID: 8664608340583335052, guid: 2cf31022e1ff739479a234dbba15c96c,
       type: 3}
   - recipe: ......--0
-    result: {fileID: 6236961111510216616, guid: adf24ce7205904c5984dfff25e31ea30,
+    result: {fileID: 8664608340583335052, guid: 2cf31022e1ff739479a234dbba15c96c,
       type: 3}
   - recipe: 1..1..0..
-    result: {fileID: 6236961111510216616, guid: adf24ce7205904c5984dfff25e31ea30,
+    result: {fileID: 8664608340583335052, guid: 2cf31022e1ff739479a234dbba15c96c,
       type: 3}
   - recipe: .1..1..0.
-    result: {fileID: 6236961111510216616, guid: adf24ce7205904c5984dfff25e31ea30,
+    result: {fileID: 8664608340583335052, guid: 2cf31022e1ff739479a234dbba15c96c,
       type: 3}
   - recipe: ..1..1..0
-    result: {fileID: 6236961111510216616, guid: adf24ce7205904c5984dfff25e31ea30,
+    result: {fileID: 8664608340583335052, guid: 2cf31022e1ff739479a234dbba15c96c,
       type: 3}
