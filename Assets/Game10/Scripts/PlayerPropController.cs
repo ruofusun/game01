@@ -70,8 +70,9 @@ public class PlayerPropController : MonoBehaviour {
     }
 
     void Update() {
-        if (inventory != null && inventory.prop != lastPropPrefab) {
+        if (inventory != null && inventory.prop != null && (prop == null || inventory.prop != lastPropPrefab)) {
             SetPropFromPrefab(inventory.prop);
+            inventory.prop = null;
         }
 
         if (Input.GetMouseButtonDown(0) && prop != null && !inventory.isInBulletTime) {
