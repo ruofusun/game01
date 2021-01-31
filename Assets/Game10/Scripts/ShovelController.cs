@@ -25,8 +25,7 @@ public class ShovelController : PropBase {
         var block = other.attachedRigidbody?.GetComponent<BlockBase>();
         if (block == null) return;
         blockFound = true;
-        if (isPlayer) Global.GetInventory()?.AddItem(block.GetItem());
-        Destroy(block.gameObject);
+        block.DestroyAndDrop();
     }
 
     void Awake() {

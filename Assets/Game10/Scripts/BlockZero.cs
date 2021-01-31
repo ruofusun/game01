@@ -10,16 +10,4 @@ public class BlockZero: BlockBase
     {
         _blockType = BlockType.zero;
     }
-
-    protected override void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Shovel"))
-        {
-            Instantiate(blockContent, transform.position, quaternion.identity);
-        }
-    }
-    public override Item GetItem()
-    {
-        return blockContent.GetComponent<Item>();
-    }
 }
