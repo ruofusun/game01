@@ -9,6 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 54760644167360487}
+  - component: {fileID: 7311076673406968709}
+  - component: {fileID: 7287485741098477302}
+  - component: {fileID: 8481502042643032520}
   m_Layer: 0
   m_Name: PlayerJavelin
   m_TagString: Untagged
@@ -32,6 +35,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7311076673406968709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376747249650643857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd5968ab62743f4b83753d8412f27df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabItem: {fileID: 1858400227593060336, guid: f66969d86ba8e674fb577725de9fd8e8,
+    type: 3}
+  animationTriggerOnUse: IsThrow
+  allowUseInAir: 1
+  allowUseOnGround: 1
+--- !u!114 &7287485741098477302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376747249650643857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db26d485d5b65214a8334551fcc3e3d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p0: {x: 0, y: 0}
+  p1: {x: 0.5, y: 2}
+  p2: {x: 2.5, y: 2}
+  p3: {x: 3, y: -10}
+  toRight: 1
+--- !u!50 &8481502042643032520
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376747249650643857}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &3479619062140924240
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,7 +103,6 @@ GameObject:
   - component: {fileID: 4572654728614797971}
   - component: {fileID: 5675781280643028491}
   - component: {fileID: 6504181274992120649}
-  - component: {fileID: 4808484785537785631}
   m_Layer: 0
   m_Name: Javelin
   m_TagString: Untagged
@@ -151,7 +208,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3479619062140924240}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db26d485d5b65214a8334551fcc3e3d9, type: 3}
   m_Name: 
@@ -168,34 +225,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3479619062140924240}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bd5968ab62743f4b83753d8412f27df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefabItem: {fileID: 1858400227593060336, guid: f66969d86ba8e674fb577725de9fd8e8,
     type: 3}
---- !u!50 &4808484785537785631
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3479619062140924240}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  animationTriggerOnUse: 
+  allowUseInAir: 1
+  allowUseOnGround: 1
 --- !u!1 &4649287707751161611
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +277,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.27752137, y: -0.2560411}

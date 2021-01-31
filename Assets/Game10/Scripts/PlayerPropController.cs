@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
@@ -47,6 +48,7 @@ public class PlayerPropController : MonoBehaviour {
             if (player.IsInAir && prop.allowUseInAir) canUse = true;
             if (canUse) {
                 prop.Use();
+                if(prop.animationTriggerOnUse!=String.Empty)
                 player.PlayerAnimator.SetTrigger(prop.animationTriggerOnUse);
             }
         }

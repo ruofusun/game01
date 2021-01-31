@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     public float damageCD = 1f;
 
     bool grounded = true;
-    bool faceRight = true;
+   public bool faceRight = true;
     bool fallingDown = false;
     Rigidbody2D rb2d;
     SpriteRenderer sr;
