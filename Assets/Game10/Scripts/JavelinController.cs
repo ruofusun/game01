@@ -35,7 +35,8 @@ public class JavelinController : PropBase
     {
         _projectile = GetComponent<Projectile>();
         _projectile.SetThrowDirection(playerPos.x > transform.position.x ? false : true);
-      _projectile.SetControlPoint(Vector2.zero, new Vector2(playerPos.x>transform.position.x? 0.5f : -0.5f, 3),  new Vector2(playerPos.x-0.5f, 3 ), playerPos);
+        Vector2 delta = playerPos -(Vector2) transform.position;
+        _projectile.SetControlPoint(Vector2.zero, new Vector2(delta.x>0? 0.5f : -0.5f, 3),  new Vector2(delta.x < 0? delta.x+0.5f:delta.x-0.5f, 3 ), delta);
     }
 
     public void PlayerSetProjectilePoint(Vector2 des)

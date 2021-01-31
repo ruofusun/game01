@@ -4,28 +4,13 @@ using UnityEngine;
 
 public class BlockOne : BlockBase
 {
-    public GameObject secondBlockContent;
+    public Drop otherDrop;
+    protected override Drop DropOnDestroy => Random.Range(0f, 1f) < 0.5f ? defaultDrop : otherDrop;
     
     // Start is called before the first frame update
     void Start()
     {
         _blockType = BlockType.one;
     }
-
-    protected override void OnCollisionEnter(Collision other)
-    {
-        base.OnCollisionEnter(other);
-    }
-
-    public override Item GetItem()
-    {
-        if (Random.Range(0f, 1f) < 0.5f)
-        {
-            return secondBlockContent.GetComponent<Item>();
-        }
-        else
-        {
-            return blockContent.GetComponent<Item>();
-        }
-    }
+    
 }
