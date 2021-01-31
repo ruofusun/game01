@@ -58,6 +58,7 @@ public class CraftPanel : MonoBehaviour {
     private bool ShouldClosePanel => inventory == null || inventory.stamina < Mathf.Epsilon;
     
     public void OpenPanel() {
+        inventory = Global.GetInventory();
         if (!CanOpenPanel) return;
         isOpened = true;
         gameObject.SetActive(true);

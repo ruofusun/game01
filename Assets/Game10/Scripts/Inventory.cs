@@ -15,6 +15,8 @@ public class Inventory : MonoBehaviour {
     [NonSerialized] public float stamina = 1;
     [NonSerialized] public bool isInBulletTime = false;
 
+    public float StanimaPercentage => stamina / maxStamina;
+
     private float StaminaChangeSpeed => isInBulletTime ? staminaCostSpeed : staminaRecoverSpeed;
 
     public void AddItem(Item item) {
