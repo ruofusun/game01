@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using Sirenix.OdinInspector;
+using UnityEngine.SceneManagement;
 
 public class HPManager : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class HPManager : MonoBehaviour
         }
         if(currentValue==0)
         {
+            SceneManager.LoadScene("MainPage");
             Debug.Log("should die now");
         }
     }
