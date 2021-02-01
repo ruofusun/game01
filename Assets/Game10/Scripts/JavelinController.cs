@@ -10,6 +10,7 @@ public class JavelinController : PropBase
     //private static readonly int dig = Animator.StringToHash("Dig");
 
    // private Vector2 _dir;
+   private PlayerController playerController;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,14 +19,14 @@ public class JavelinController : PropBase
     }
     protected override void OnUse()
     {
-        PlayerController playerController = Global.GetPlayer();
+        playerController = Global.GetPlayer();
         if (playerController.faceRight)
         {
-            PlayerSetProjectilePoint((Vector2)transform.position+ new Vector2(7,3));
+            PlayerSetProjectilePoint( new Vector2(7,-2));
         }
         else
         {
-            PlayerSetProjectilePoint((Vector2)transform.position+ new Vector2(-7,3));
+            PlayerSetProjectilePoint(new Vector2(-7,-2));
         }
 
 
@@ -44,8 +45,8 @@ public class JavelinController : PropBase
         gameObject.transform.parent = null;
         _projectile = GetComponent<Projectile>();
        // transform.RotateAround(transform.position, Vector3.forward, 90);
-        _projectile.SetThrowDirection(des.x > transform.position.x ? false : true);
-        _projectile.SetControlPoint(Vector2.zero, new Vector2(des.x>transform.position.x? 0.5f : -0.5f, 3),  new Vector2(des.x-0.5f, 3 ),des);
+       _projectile.SetThrowDirection(playerController.faceRight? false : true);
+        _projectile.SetControlPoint(Vector2.zero, new Vector2(des.x>0? 0.5f : -0.5f, 3),  new Vector2(des.x < 0? des.x+0.5f:des.x-0.5f, 3 ),des);
     }
 
     // Update is called once per frame

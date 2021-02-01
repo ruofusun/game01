@@ -19,7 +19,7 @@ public class BreezeMapCreater : MonoBehaviour
     string levelD06 = "nnnn0n000n1nnnn";
     string levelD05 = "nnn1nn1?1nn0nnn";
     string levelD04 = "nn1nnn1n1nnn1nn";
-    string levelD03 = "1nn0nnnnnnn0nn1";
+    string levelD03 = "1nn0nnnnnnnnnn1";
     string levelD02 = "01nnn00000nnn10";
     string levelD01 = "001000000000100";
 
@@ -36,7 +36,7 @@ public class BreezeMapCreater : MonoBehaviour
     string levelB07 = "nnnnnnnnnnn1001";
     string levelB06 = "nnnnnnnnnnn020n";
     string levelB05 = "nnnnnnnnnnn01n?";
-    string levelB04 = "nnnnnnnnnnn20nn";
+    string levelB04 = "nnnnnnnnn1120nn";
     string levelB03 = "nnnnnn102001201";
     string levelB02 = "012001101201200";
     string levelB01 = "102011010100221";

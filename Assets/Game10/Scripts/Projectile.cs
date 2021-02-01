@@ -82,6 +82,7 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    //what need to pass in is the relative value,for example p0 should be vector2.zero
     Vector2 CalculateBezierPoint(float t, Vector2 p0, Vector2 p1, Vector2 p2, Vector2 p3)
     {
         float u = 1-t;
@@ -107,6 +108,7 @@ public class Projectile : MonoBehaviour
         p2 = pp2;
         p3 = pp3;
         canMove = true;
+        origin = transform.position;
 
     }
     

@@ -12085,7 +12085,7 @@ PrefabInstance:
         type: 3}
       propertyPath: initProp
       value: 
-      objectReference: {fileID: 8664608340583335052, guid: 2cf31022e1ff739479a234dbba15c96c,
+      objectReference: {fileID: 7311076673406968709, guid: b9f00fcb04dcec04bb1c8f73b77d6360,
         type: 3}
     - target: {fileID: 6262926524933407569, guid: aab904f196d99904cae6b64ec9454b98,
         type: 3}
